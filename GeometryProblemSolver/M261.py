@@ -62,7 +62,8 @@ def initialize():
     set_sum_value('sb4', 'sb5', 'sb2')
 
 def get_all():
-    
+    # Congruent: SSS, SAS, ASA, AAS, HL
+    # Similar: AAA
     return output
 
 def is_same_edge(n1, n2):
@@ -122,6 +123,7 @@ def set_equal(name1, name2):
 
     merge_equals(globals()[name1], globals()[name2])
     merge_sums(globals()[name1], globals()[name2])
+    merge_fracs(globals()[name1], globals()[name2])
 
     globals()['know_'+name1]()
     globals()['know_'+name2]()
@@ -130,23 +132,25 @@ def set_equal(name1, name2):
 # satisfy the relationship name1=fraction*name2
 def set_fraction(name1, name2, fraction): 
     initialize()
-    if name1 in globals()[name2].fraction and fraction in globals()[name2].fraction[name1]:
-        print('not added')
+    if name1 in globals()[name2].fraction: # and fraction in globals()[name2].fraction[name1]:
         return
     output['fraction'].append([name1, name2, fraction])
-    print("added")
     x = globals()[name1].fraction
     # if key exists in dict, append to list
-    if name2 in x and fraction not in x[name2]:
-        x[name2].append(1/fraction)
+    #if name2 in x and fraction not in x[name2]:
+    #x[name2].append(1/fraction)
     # else create key list pair in dict
-    else:
-        x[name2] = [1/fraction]
+    #else:
+    x[name2] = fraction
     y = globals()[name2].fraction
-    if name1 in y and fraction not in y[name1]:
-        y[name1].append(fraction)
-    else:
-        y[name1] = [fraction]
+    # if name1 in y and fraction not in y[name1]:
+    #     y[name1].append(fraction)
+    # else:
+    y[name1] = 1/fraction
+
+    merge_fraction(name1, name2, fraction)
+    merge_fraction(name2, name1, 1/fraction)
+
     globals()['know_'+name1]()
     globals()['know_'+name2]()
 
@@ -863,6 +867,23 @@ def merge_sum_value(a, b, c, merge):
             if a != b and a != item and b != item:
                 set_sum_value(a, b, item)
 
+def merge_fracs(a, b):
+    for key in list(a.fraction):
+        if key not in b.fraction:
+            if a.fraction[key] > 1:
+                set_fraction(key, b.name, a.fraction[key])
+        
+    for key in list(b.fraction):
+        if key not in a.fraction:
+            if b.fraction[key] > 1:
+                set_fraction(a.name, key, b.fraction[key])
+        
+def merge_fraction(a, b, c):
+    for i in [a]+globals()[a].equal:
+        for j in [b]+globals()[b].equal: 
+            if i != j:
+                set_fraction(i, j, c)  
+
 def set_angle(a):
     if a.right_angle:
         for angle in a.equal:
@@ -1033,6 +1054,18 @@ def sc1_sb3_sd4(known, a, b):
             merge_sum_value('sb3', 'sd4', 'sb1', 1)
             merge_sum_value('sa3', 'sc4', 'sc1', 1)
 
+    if known.name == 'sb3':
+        if 'sd4' in sb3.fraction:
+            print(sb3.fraction['sd4'])
+            if sb3.fraction['sd4'] > 1:
+                set_fraction('sc2', 'sd4', sb3.fraction['sd4']+1)
+
+    if known.name == 'sd4':
+        if 'sb3' in sd4.fraction:
+            print(sd4.fraction['sb3'])
+            if sd4.fraction['sb3'] > 1:
+                set_fraction('sc2', 'sb3', sd4.fraction['sb3']+1)
+
 def sa2_sa4_sa5(known, a, b):
     if check_parallel(known, ['sa1']):
         equal(c1, 'd2')
@@ -1084,6 +1117,18 @@ def sa2_sa4_sa5(known, a, b):
         if 'sc2' in sa2.equal:
             equal(a2, 'c2')
             merge_sum_value('sa4', 'sa5', 'sc2', 1)
+
+    if known.name == 'sa4':
+        if 'sa5' in sa4.fraction:
+            print(sa4.fraction['sa5'])
+            if sa4.fraction['sa5'] > 1:
+                set_fraction('sa2', 'sa5', sa4.fraction['sa5']+1)
+
+    if known.name == 'sa5':
+        if 'sa4' in sa5.fraction:
+            print(sa5.fraction['sa4'])
+            if sa5.fraction['sa4'] > 1:
+                set_fraction('sa2', 'sa4', sa5.fraction['sa4']+1)
 
 def sb2_sb4_sb5(known, a, b):
     if check_parallel(known, ['sa1']):
@@ -1137,6 +1182,18 @@ def sb2_sb4_sb5(known, a, b):
             equal(b2, 'c2')
             merge_sum_value('sb4', 'sb5', 'sc2', 1)
 
+    if known.name == 'sb4':
+        if 'sb5' in sb4.fraction:
+            print(sb4.fraction['sb5'])
+            if sb4.fraction['sb5'] > 1:
+                set_fraction('sb2', 'sb5', sb4.fraction['sb5']+1)
+
+    if known.name == 'sb5':
+        if 'sb4' in sb5.fraction:
+            print(sb5.fraction['sb4'])
+            if sb5.fraction['sb4'] > 1:
+                set_fraction('sb2', 'sb4', sb5.fraction['sb4']+1)
+
 def sb1_sa3_sc4(known, a, b):
     if check_parallel(known, ['sb2', 'sb4', 'sb5']):
         equal(a1, 'd4'); equal(c2, 'd3')
@@ -1187,4 +1244,16 @@ def sb1_sa3_sc4(known, a, b):
             equal(b1, 'c1')
             merge_sum_value('sa3', 'sc4', 'sc1', 1)
             merge_sum_value('sb3', 'sd4', 'sb1', 1)
+
+    if known.name == 'sa3':
+        if 'sc4' in sa3.fraction:
+            print(sa3.fraction['sc4'])
+            if sa3.fraction['sc4'] > 1:
+                set_fraction('sb1', 'sc4', sa3.fraction['sc4']+1)
+
+    if known.name == 'sc4':
+        if 'sa3' in sc4.fraction:
+            print(sc4.fraction['sa3'])
+            if sc4.fraction['sa3'] > 1:
+                set_fraction('sb1', 'sa3', sc4.fraction['sa3']+1)
     
