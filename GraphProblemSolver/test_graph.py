@@ -1,17 +1,32 @@
+import sys
+import csv
 import networkx as nx
 import matplotlib.pyplot as plt
 
-G = nx.Graph()
-G.add_node(1)
-G.add_nodes_from([2,3])
+graph_file = sys.argv[1]
+first_node = []
+second_node = []
+weight = []
+edge_color = []
+function_is_path = False
+function_color = False
 
-H = nx.path_graph(10)
-G.add_nodes_from(H)
-G.add_node(H)
-G.add_edges_from(H.edges)
+with open(graph_file, 'r') as f:
+    reader = csv.reader(f)
+    for row in reader:
+            first_node.append(int(row[0]))
+            second_node.append(int(row[1]))
+            weight.append(row[2])
+            edge_color.append(row[3])
 
-G.add_edge(1, 2)
-e = (2, 3)
-G.add_edge(*e)  # unpack edge tuple*
+G = nx.Graph() #create a graph
+
+#adding edges & its colors
+for i in range(len(first_node)):
+    G.add_edge(first_node[i], second_node[i], color=edge_color[i])
+
 nx.draw_random(G)
-plt.show()
+#plt.show()
+
+x = list(G.neighbors(1))
+print(x[1])

@@ -15,6 +15,15 @@ def main():
     function_is_path = False
     function_color = False
 
+    print("Input A:")
+    A = input()
+    print("Input B:")
+    B = input()
+    print("Input C:")
+    C = input()
+    print("Input Color:")
+    color_input = input()
+    print(A, B, C, color_input)
     #reading csv file
     with open(graph_file, 'r') as f:
         reader = csv.reader(f)
@@ -25,25 +34,25 @@ def main():
                 edge_color.append(row[3])
 
     G = nx.Graph() #create a graph
-    #adding nodes
-    for i in first_node:
-        G.add_node(i) 
-    for i in second_node:
-        if i in first_node:
-            continue
-        else:
-            G.add_node(i)
-    #end of adding nodes
-
+    
     #adding edges & its colors
     for i in range(len(first_node)):
         G.add_edge(first_node[i], second_node[i], color=edge_color[i])
-        
-    function_is_path = fn.is_path(G, 1, 2)
-    function_color = fn.color(G, 'black', 1)
-    color_of=nx.get_edge_attributes(G,'color')
+
+    edges = G.edges()
+    arr = []
+    for i in edges:
+        arr.append(i)
+    l = []
+    l.append(A)
+    l_c = []
+    fn.find_paths(G, A, B, l, l_c, color_input, int(C), 0, A)
+    #function_color = fn.color(G, color_input, 1)
+    #color_of=nx.get_edge_attributes(G,'color')
     #print(color_of)
-    print(function_is_path, function_color)
+
+    #function_is_path = fn.is_path(arr, A, B)
+    #print(function_is_path)
     nx.draw_random(G)
     #plt.show()
     
