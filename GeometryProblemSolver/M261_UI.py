@@ -38,6 +38,7 @@ if __name__ == '__main__':
             <div class='diagram'>
                 <h2>Diagram</h2>
                 <img src='%s' alt='diagram 1'>
+                <img src='%s' alt='diagram 2'>
             </div>
             <div class='predicates'>
                 <h2>Inputs</h2>
@@ -51,8 +52,7 @@ if __name__ == '__main__':
                 <h2>Output</h2>
                 <p>%s</p>
             </div>
-        </div>""" % (css.p2_diagram, s.format('pred1', 'txt1'),
+        </div>""" % (css.p2_diagram, css.p1_diagram, s.format('pred1', 'txt1'),
                     s.format('pred2', 'txt2'), s.format('pred3', 'txt3'),
                     result))
-    #print("<img src='%s' alt='diagram 1' height='500' width='900'>" % css.p1_diagram)
   

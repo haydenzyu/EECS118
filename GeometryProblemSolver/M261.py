@@ -393,7 +393,7 @@ def know_c1():
                     x = 0
                 merge_sum_value('c1', 'd1', item, x)
 
-    if 'd2' in b1.sum_value and 180 in b1.sum_value['d2']:
+    if 'd2' in c1.sum_value and 180 in c1.sum_value['d2']:
         equal(c1, 'd1')
 
 def know_a2():
@@ -595,7 +595,7 @@ def d1_d3(known, a, b, s1, s2):
         merge_sum_value('d2', 'd5', 180, 0)
         merge_sum_value(known.name, 'd4', 180, 0)
 
-    if b in d1.sum_value and 90 in d1.sum_value[b]:
+    if b in known.sum_value and 90 in known.sum_value[b] or b in a.sum_value and 90 in a.sum_value[b]:
         check_perpendicular(s1, s2, True)
     
     if a.name in known.sum_value and 180 in known.sum_value[a.name]:
@@ -613,14 +613,14 @@ def d1_d3(known, a, b, s1, s2):
                     x = 1
                 else:
                     x = 0
-                merge_sum_value(a.name, 'd4', item, x)
+                merge_sum_value(a.name, 'd6', item, x)
         else:
             for item in  known.sum_value['d6']:
                 if type(item) == str: 
                     x = 1
                 else:
                     x = 0
-                merge_sum_value(a.name, 'd6', item, x)
+                merge_sum_value(a.name, 'd4', item, x)
 
     if 'd5' in known.sum_value and 180 in known.sum_value['d5']:
         equal(known, 'd4'); equal(d2, 'd5') #; equal(a1, 'c2')
@@ -656,7 +656,7 @@ def d4_d6(known, a, b, s1, s2):
         merge_sum_value('d2', 'd5', 180, 0)
         merge_sum_value(known.name, 'd1', 180, 0)
 
-    if b in d1.sum_value and 90 in d1.sum_value[b]:
+    if b in known.sum_value and 90 in known.sum_value[b] or b in a.sum_value and 90 in a.sum_value[b]:
         check_perpendicular(s1, s2, True)
     
     if a.name in known.sum_value and 180 in known.sum_value[a.name]:
@@ -674,14 +674,14 @@ def d4_d6(known, a, b, s1, s2):
                     x = 1
                 else:
                     x = 0
-                merge_sum_value(a.name, 'd1', item, x)
+                merge_sum_value(a.name, 'd3', item, x)
         else:
             for item in  known.sum_value['d3']:
                 if type(item) == str: 
                     x = 1
                 else:
                     x = 0
-                merge_sum_value(a.name, 'd3', item, x)
+                merge_sum_value(a.name, 'd1', item, x)
 
     if 'd2' in known.sum_value and 180 in known.sum_value['d2']:
         equal(known, 'd1'); equal(d2, 'd5') #; equal(a1, 'c2')
@@ -690,7 +690,7 @@ def d4_d6(known, a, b, s1, s2):
         merge_sum_value('d2', 'd4', 180, 0)
 
 def know_d1():
-    d1_d3(d1, d3, 'c1', sa1, 'sb1')
+    d1_d3(d1, d3, 'c1', sa1, 'sa2')
 
 def know_d2():
     check_d_angles(d1, d2, d3, sb1, 'sa2')
@@ -706,6 +706,14 @@ def know_d2():
 
     if 'd5' in d2.equal:
         equal(d1, 'd4')
+
+    if 'b2' in d2.equal:
+        set_parallel('sb1', 'sc2')
+        merge_sum_value('b2', 'd1', 180, 0)
+    
+    if 'c1' in d2.equal:
+        set_parallel('sa1', 'sa2')
+        merge_sum_value('c1', 'd1', 180, 0)
 
     if 'c2' in d2.sum_value:
         if 90 in d2.sum_value['c2']:
@@ -760,6 +768,14 @@ def know_d5():
     if 'd2' in d5.equal:
         equal(d1, 'd4')
 
+    if 'a2' in d5.equal:
+        set_parallel('sc1', 'sc2')
+        merge_sum_value('a2', 'd4', 180, 0)
+    
+    if 'b1' in d5.equal:
+        set_parallel('sa1', 'sb2')
+        merge_sum_value('b1', 'd4', 180, 0)
+
     if 'c2' in d5.sum_value:
         if 90 in d5.sum_value['c2']:
             check_perpendicular(sc1, 'sa2', True)
@@ -784,8 +800,8 @@ def know_d5():
                 #     x = 0
                     merge_sum_value('c2', 'd2', 360-item, 0)
     
-    if 'd5' in d5.sum_value:
-        for item in  d5.sum_value['d5']:
+    if 'd2' in d5.sum_value:
+        for item in  d5.sum_value['d2']:
                 if type(item) == str: 
                 #     x = 1
                 # else:
@@ -811,11 +827,6 @@ def check_parallel(known, names):
 def equal(a, n2):
     if a and n2 not in a.equal:
         set_equal(a.name, n2)
-
-def check_sum(a, name, val):
-    if name not in a.sum_value or val not in a.sum_value[name]:
-        return True
-    return False
 
 def check_perpendicular(a, name, perpendicular):
     edges = [['sb1', 'sa3', 'sc4'], 
@@ -963,15 +974,66 @@ def know_sa1():
 
 def know_sb1():
     sb1_sa3_sc4(sb1, sa3, sc4)
+
+    for i in ['sa2', 'sb2', 'sc2']:
+        if i in sb1.equal:
+            merge_sum_value('sa3', 'sc4', i, 1)
+    if 'sa1' in sb1.equal:
+        equal(a1, 'b1')
+        merge_sum_value('sa3', 'sc4', 'sa1', 1)
+
+    if 'sc1' in sb1.equal:
+        equal(b1, 'c1')
+        merge_sum_value('sa3', 'sc4', 'sc1', 1)
+        merge_sum_value('sb3', 'sd4', 'sb1', 1)
     
 def know_sc1():
     sc1_sb3_sd4(sc1, sb3, sd4)
+
+    for i in ['sa2', 'sb2', 'sc2']:
+        if i in sc1.equal:
+            merge_sum_value('sb3', 'sd4', i, 1)
+
+    if 'sa1' in sc1.equal:
+        equal(a1, 'c1')
+        merge_sum_value('sb3', 'sd4', 'sa1', 1)
+    
+    if 'sb1' in sc1.equal:
+        equal(b1, 'c1')
+        merge_sum_value('sb3', 'sd4', 'sb1', 1)
+        merge_sum_value('sa3', 'sc4', 'sc1', 1)
     
 def know_sa2():
     sa2_sa4_sa5(sa2, sa4, sa5)
 
+    for i in ['sa1', 'sb1', 'sc1']:
+        if i in sa2.equal:
+            merge_sum_value('sa4', 'sa5', i, 1)
+
+    if 'sb2' in sa2.equal:
+        equal(a2, 'b2')
+        merge_sum_value('sa4', 'sa5', 'sb2', 1)
+        merge_sum_value('sb4', 'sb5', 'sa2', 1)
+    
+    if 'sc2' in sa2.equal:
+        equal(a2, 'c2')
+        merge_sum_value('sa4', 'sa5', 'sc2', 1)
+
 def know_sb2():
     sb2_sb4_sb5(sb2, sb4, sb5)
+
+    for i in ['sa1', 'sb1', 'sc1']:
+        if i in sb2.equal:
+            merge_sum_value('sb4', 'sb5', i, 1)
+
+    if 'sa2' in sb2.equal:
+        equal(a2, 'b2')
+        merge_sum_value('sb4', 'sb5', 'sa2', 1)
+        merge_sum_value('sa4', 'sa5', 'sb2', 1)
+    
+    if 'sc2' in sb2.equal:
+        equal(b2, 'c2')
+        merge_sum_value('sb4', 'sb5', 'sc2', 1)
 
 def know_sc2():
     if check_parallel(sc2, ['sb1', 'sa3', 'sc4']):
@@ -1013,26 +1075,58 @@ def know_sc2():
 def know_sa3():
     sb1_sa3_sc4(sa3, sb1, sc4)
 
+    if 'sc4' in sa3.fraction:
+        if sa3.fraction['sc4'] > 1:
+            set_fraction('sb1', 'sc4', sa3.fraction['sc4']+1)
+
 def know_sb3():
     sc1_sb3_sd4(sb3, sc1, sd4)
 
+    if 'sd4' in sb3.fraction:
+        if sb3.fraction['sd4'] > 1:
+            set_fraction('sc1', 'sd4', sb3.fraction['sd4']+1)
+
 def know_sa4():
     sa2_sa4_sa5(sa4, sa2, sa5)
+
+    if 'sa5' in sa4.fraction:
+        if sa4.fraction['sa5'] > 1:
+            set_fraction('sa2', 'sa5', sa4.fraction['sa5']+1)
     
 def know_sb4():
     sb2_sb4_sb5(sb4, sb2, sb5)
+
+    if 'sb5' in sb4.fraction:
+        if sb4.fraction['sb5'] > 1:
+            set_fraction('sb2', 'sb5', sb4.fraction['sb5']+1)
     
 def know_sc4():
     sb1_sa3_sc4(sc4, sb1, sa3)
+
+    if 'sa3' in sc4.fraction:
+        if sc4.fraction['sa3'] > 1:
+            set_fraction('sb1', 'sa3', sc4.fraction['sa3']+1)
     
 def know_sd4():
     sc1_sb3_sd4(sd4, sc1, sb3)
+
+    if 'sb3' in sd4.fraction:
+        if sd4.fraction['sb3'] > 1:
+            set_fraction('sc1', 'sb3', sd4.fraction['sb3']+1)
     
 def know_sa5():
     sa2_sa4_sa5(sa5, sa2, sa4)
+
+    if 'sa4' in sa5.fraction:
+        if sa5.fraction['sa4'] > 1:
+            set_fraction('sa2', 'sa4', sa5.fraction['sa4']+1)
     
 def know_sb5():
     sb2_sb4_sb5(sb5, sb2, sb4)
+
+    if 'sb4' in sb5.fraction:
+        if sb5.fraction['sb4'] > 1:
+            set_fraction('sb2', 'sb4', sb5.fraction['sb4']+1)
 
 def sc1_sb3_sd4(known, a, b):
     if check_parallel(known, ['sc2']):
@@ -1076,32 +1170,6 @@ def sc1_sb3_sd4(known, a, b):
         merge_sum_value('a2', 'd4', 90, 0)
         # check_perpendicular(a, ['sc2'], True)
         # check_perpendicular(b, ['sc2'], True)
-    
-    if known.name == 'sc1':
-        for i in ['sa2', 'sb2', 'sc2']:
-            if i in sc1.equal:
-                merge_sum_value('sb3', 'sd4', i, 1)
-
-        if 'sa1' in sc1.equal:
-            equal(a1, 'c1')
-            merge_sum_value('sb3', 'sd4', 'sa1', 1)
-        
-        if 'sb1' in sc1.equal:
-            equal(b1, 'c1')
-            merge_sum_value('sb3', 'sd4', 'sb1', 1)
-            merge_sum_value('sa3', 'sc4', 'sc1', 1)
-
-    if known.name == 'sb3':
-        if 'sd4' in sb3.fraction:
-            print(sb3.fraction['sd4'])
-            if sb3.fraction['sd4'] > 1:
-                set_fraction('sc2', 'sd4', sb3.fraction['sd4']+1)
-
-    if known.name == 'sd4':
-        if 'sb3' in sd4.fraction:
-            print(sd4.fraction['sb3'])
-            if sd4.fraction['sb3'] > 1:
-                set_fraction('sc2', 'sb3', sd4.fraction['sb3']+1)
 
 def sa2_sa4_sa5(known, a, b):
     if check_parallel(known, ['sa1']):
@@ -1146,32 +1214,6 @@ def sa2_sa4_sa5(known, a, b):
         # check_perpendicular(a, ['sa1'], True)
         # check_perpendicular(b, ['sa1'], True)
 
-    if known.name == 'sa2':
-        for i in ['sa1', 'sb1', 'sc1']:
-            if i in sa2.equal:
-                merge_sum_value('sa4', 'sa5', i, 1)
-
-        if 'sb2' in sa2.equal:
-            equal(a2, 'b2')
-            merge_sum_value('sa4', 'sa5', 'sb2', 1)
-            merge_sum_value('sb4', 'sb5', 'sa2', 1)
-        
-        if 'sc2' in sa2.equal:
-            equal(a2, 'c2')
-            merge_sum_value('sa4', 'sa5', 'sc2', 1)
-
-    if known.name == 'sa4':
-        if 'sa5' in sa4.fraction:
-            print(sa4.fraction['sa5'])
-            if sa4.fraction['sa5'] > 1:
-                set_fraction('sa2', 'sa5', sa4.fraction['sa5']+1)
-
-    if known.name == 'sa5':
-        if 'sa4' in sa5.fraction:
-            print(sa5.fraction['sa4'])
-            if sa5.fraction['sa4'] > 1:
-                set_fraction('sa2', 'sa4', sa5.fraction['sa4']+1)
-
 def sb2_sb4_sb5(known, a, b):
     if check_parallel(known, ['sa1']):
         equal(b1, 'd5') 
@@ -1215,32 +1257,6 @@ def sb2_sb4_sb5(known, a, b):
         # check_perpendicular(a, ['sa1'], True)
         # check_perpendicular(b, ['sa1'], True)
 
-    if known.name == 'sb2':
-        for i in ['sa1', 'sb1', 'sc1']:
-            if i in sb2.equal:
-                merge_sum_value('sb4', 'sb5', i, 1)
-
-        if 'sa2' in sb2.equal:
-            equal(a2, 'b2')
-            merge_sum_value('sb4', 'sb5', 'sa2', 1)
-            merge_sum_value('sa4', 'sa5', 'sb2', 1)
-        
-        if 'sc2' in sb2.equal:
-            equal(b2, 'c2')
-            merge_sum_value('sb4', 'sb5', 'sc2', 1)
-
-    if known.name == 'sb4':
-        if 'sb5' in sb4.fraction:
-            print(sb4.fraction['sb5'])
-            if sb4.fraction['sb5'] > 1:
-                set_fraction('sb2', 'sb5', sb4.fraction['sb5']+1)
-
-    if known.name == 'sb5':
-        if 'sb4' in sb5.fraction:
-            print(sb5.fraction['sb4'])
-            if sb5.fraction['sb4'] > 1:
-                set_fraction('sb2', 'sb4', sb5.fraction['sb4']+1)
-
 def sb1_sa3_sc4(known, a, b):
     if check_parallel(known, ['sb2', 'sb4', 'sb5']):
         equal(a1, 'd4'); equal(c2, 'd1')
@@ -1248,7 +1264,7 @@ def sb1_sa3_sc4(known, a, b):
     if check_parallel(known, ['sc2']):
         equal(b2, 'd2')
     
-    if check_perpendicular(known, 'sa1', False): #and check_sum(a1, 'b1', 90):
+    if check_perpendicular(known, 'sa1', False):
         check = c1.right_angle
         c1.right_angle = True; c1.angle = 90; set_angle(c1, check)
         merge_sum_value('a1', 'b1', 90, 0)
@@ -1257,7 +1273,7 @@ def sb1_sa3_sc4(known, a, b):
         # check_perpendicular(b, ['sa1'], True)
         # know_c1()
 
-    if check_perpendicular(known, 'sc1', False): #and check_sum(b1, 'c1', 90):
+    if check_perpendicular(known, 'sc1', False):
         check = a1.right_angle
         a1.right_angle = True; a1.angle = 90; set_angle(a1, check)
         merge_sum_value('b1', 'c1', 90, 0)
@@ -1283,28 +1299,3 @@ def sb1_sa3_sc4(known, a, b):
         merge_sum_value('b2', 'd3', 90, 0)
         # check_perpendicular(a, ['sc2'], True)
         # check_perpendicular(b, ['sc2'], True)
-
-    if known.name == 'sb1':
-        for i in ['sa2', 'sb2', 'sc2']:
-            if i in sb1.equal:
-                merge_sum_value('sa3', 'sc4', i, 1)
-        if 'sa1' in sb1.equal:
-            equal(a1, 'b1')
-            merge_sum_value('sa3', 'sc4', 'sa1', 1)
-
-        if 'sc1' in sb1.equal:
-            equal(b1, 'c1')
-            merge_sum_value('sa3', 'sc4', 'sc1', 1)
-            merge_sum_value('sb3', 'sd4', 'sb1', 1)
-
-    if known.name == 'sa3':
-        if 'sc4' in sa3.fraction:
-            print(sa3.fraction['sc4'])
-            if sa3.fraction['sc4'] > 1:
-                set_fraction('sb1', 'sc4', sa3.fraction['sc4']+1)
-
-    if known.name == 'sc4':
-        if 'sa3' in sc4.fraction:
-            print(sc4.fraction['sa3'])
-            if sc4.fraction['sa3'] > 1:
-                set_fraction('sb1', 'sa3', sc4.fraction['sa3']+1)
