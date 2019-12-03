@@ -8,8 +8,6 @@ selection = """<select name='{}' class='select-css'>
                 <option value='set_equal'>set_equal</option>
                 <option value='set_fraction'>set_fraction</option>
                 <option value='set_sum_value'>set_sum_value</option>
-                <option value='set_similar'>set_similar</option>
-                <option value='set_congruent'>set_congruent</option>
         </select>
         <input name='{}' type='text' placeholder='Ex. a1,a2,90' size='15' maxlength='18'>
         <br><br>
