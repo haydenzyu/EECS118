@@ -32,14 +32,6 @@ d4 = Angle('d4'); d5 = Angle('d5'); d6 = Angle('d6')
 angles = [a1, b1, c1, a2, b2, c2, d1, d2, d3, d4, d5]
 
 output = {}
-        # 'parallel': [],
-        # 'perpendicular': [],
-        # 'equal': [],
-        # 'fraction': [],
-        # 'sum_value': [],
-        # 'similar': [],
-        # 'congruent': []
-    # }
 
 init = True
 
@@ -62,8 +54,6 @@ def initialize():
     set_sum_value('sb4', 'sb5', 'sb2')
 
 def get_all():
-    # Congruent: SSS, SAS, ASA, AAS, HL
-    # Similar: AAA
     return output
 
 def is_same_edge(n1, n2):
@@ -156,16 +146,8 @@ def set_fraction(name1, name2, fraction):
     else:
         output['fraction'] = [[name1, name2, fraction]]
     x = globals()[name1].fraction
-    # if key exists in dict, append to list
-    #if name2 in x and fraction not in x[name2]:
-    #x[name2].append(1/fraction)
-    # else create key list pair in dict
-    #else:
     x[name2] = fraction
     y = globals()[name2].fraction
-    # if name1 in y and fraction not in y[name1]:
-    #     y[name1].append(fraction)
-    # else:
     y[name1] = 1/fraction
 
     merge_fraction(name1, name2, fraction)
@@ -254,6 +236,57 @@ predicates = {
     'set_congruent': set_congruent
 }
 
+def check_congruency(a1, b1, c1, a2, b2, c2, sa1, sb1, sc1, sa2, sb2, sc2, ar1, ar2):
+    if a2 in a1.equal:
+        if b2 in b1.equal or c2 in c1.equal:
+            if sc2 in sc1.equal or sa2 in sa1.equal or sb2 in sb1.equal:
+                set_congruent(ar1, ar2)
+                equal(sc1, sc2); equal(sa1, sa2); equal(sb1, sb2)
+            else:
+                set_similar(ar1, ar2)
+            equal(b1, b2); equal(c1, c2)
+
+        if c2 in b1.equal or b2 in c1.equal:
+            if sb2 in sc1.equal or sa2 in sa1.equal or sc2 in sb1.equal:
+                set_congruent(ar1, ar2)
+                equal(sc1, sb2); equal(sa1, sa2); equal(sb1, sc2)
+            else:
+                set_similar(ar1, ar2)
+            equal(b1, c2); equal(c1, b2)
+
+        if sb2 in sb1.equal and sc2 in sc1.equal:
+            set_congruent(ar1, ar2)
+            equal(b1, b2); equal(c1, c2)
+            equal(sc1, sc2); equal(sa1, sa2); equal(sb1, sb2)
+
+        if sc2 in sb1.equal and sb2 in sc1.equal:
+            set_congruent(ar1, ar2)
+            equal(b1, c2); equal(c1, b2)
+            equal(sc1, sb2); equal(sa1, sa2); equal(sb1, sc2)
+
+        if sb2 in sb1.fraction and sc2 in sc1.fraction and sb1.fraction[sb2] == sc1.fraction[sc2]:
+            set_similar(ar1, ar2)
+            equal(b1, b2); equal(c1, c2)
+            set_fraction(sa1.name, sa2, sb1.fraction[sb2])
+
+        if sc2 in sb1.fraction and sb2 in sc1.fraction and sb1.fraction[sc2] == sc1.fraction[sb2]:
+            set_similar(ar1, ar2)
+            equal(b1, c2); equal(c1, b2)
+            set_fraction(sa1.name, sa2, sb1.fraction[sc2])
+
+def check_triangle(a1, b1, c1, a2, b2, c2, sa1, sb1, sc1, sa2, sb2, sc2, ar1, ar2):
+    # Congruent: SSS, SAS, ASA, AAS, HL
+    # Similar: AA, AAA
+    check_congruency(a1, b1, c1, a2, b2, c2, sa1, sb1, sc1, sa2, sb2, sc2, ar1, ar2)
+    check_congruency(a1, b1, c1, b2, c2, a2, sa1, sb1, sc1, sb2, sc2, sa2, ar1, ar2)
+    check_congruency(a1, b1, c1, c2, a2, b2, sa1, sb1, sc1, sc2, sa2, sb2, ar1, ar2)
+    check_congruency(b1, c1, a1, a2, b2, c2, sb1, sc1, sa1, sa2, sb2, sc2, ar1, ar2)
+    check_congruency(b1, c1, a1, b2, c2, a2, sb1, sc1, sa1, sb2, sc2, sa2, ar1, ar2)
+    check_congruency(b1, c1, a1, c2, a2, b2, sb1, sc1, sa1, sc2, sa2, sb2, ar1, ar2)
+    check_congruency(c1, a1, b1, a2, b2, c2, sc1, sa1, sb1, sa2, sb2, sc2, ar1, ar2)
+    check_congruency(c1, a1, b1, b2, c2, a2, sc1, sa1, sb1, sb2, sc2, sa2, ar1, ar2)
+    check_congruency(c1, a1, b1, c2, a2, b2, sc1, sa1, sb1, sc2, sa2, sb2, ar1, ar2)
+
 def know_ar1():
     return
 
@@ -267,6 +300,9 @@ def check_right_angle(angle, name1, name2, s1, s2):
         check_perpendicular(s1, s2, True)
 
 def know_a1():
+
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
     # if a1 = 90, then b1+c1 = 90 because a1+b1+c1 = 180
     check_right_angle(a1, 'b1', 'c1', sb1, 'sc1')
 
@@ -337,6 +373,8 @@ def know_b1():
     # check_corner_angle(b1, 'a1', 'c1')
     check_right_angle(b1, 'a1', 'c1', sa1, 'sc1')
 
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
     if 'a1' in b1.equal:
         equal(sa1, 'sb1')
     if 'c1' in b1.equal:
@@ -389,6 +427,8 @@ def know_c1():
     # if c1 = 90, then b1+c1 = 90 because a1+b1+c1 = 180
     # check_corner_angle(c1, 'a1', 'b1')
     check_right_angle(c1, 'a1', 'b1', sa1, 'sb1')
+    
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
 
     if 'a1' in c1.equal:
         equal(sa1, 'sc1')
@@ -440,6 +480,8 @@ def know_a2():
     # check_corner_angle(a2, 'b2', 'c2')
     check_right_angle(a2, 'b2', 'c2', sb2, 'sc2')
 
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
     if 'b2' in a2.equal:
         equal(sa2, 'sb2')
     if 'c2' in a2.equal:
@@ -490,6 +532,8 @@ def know_b2():
     # check_corner_angle(b2, 'a2', 'c2')
     check_right_angle(b2, 'a2', 'c2', sa2, 'sc2')
 
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
     if 'a2' in b2.equal:
         equal(sa2, 'sb2')
     if 'c2' in b2.equal:
@@ -539,6 +583,8 @@ def know_b2():
 def know_c2():
     # check_corner_angle(c2, 'a2', 'b2')
     check_right_angle(c2, 'a2', 'b2', sa2, 'sb2')
+
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
 
     if 'a2' in c2.equal:
         equal(sa2, 'sc2')
@@ -978,6 +1024,8 @@ def set_angle(a, check):
         globals()['know_'+a.name]()
 
 def know_sa1():
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
     if check_parallel(sa1, ['sa2', 'sa5', 'sa4']):
         equal(c1, 'd2')
     
@@ -1013,6 +1061,8 @@ def know_sa1():
         merge_sum_value('sb3', 'sd4', 'sa1', 1)
 
 def know_sb1():
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
     sb1_sa3_sc4(sb1, sa3, sc4)
 
     for i in ['sa2', 'sb2', 'sc2']:
@@ -1028,6 +1078,8 @@ def know_sb1():
         merge_sum_value('sb3', 'sd4', 'sb1', 1)
     
 def know_sc1():
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
     sc1_sb3_sd4(sc1, sb3, sd4)
 
     for i in ['sa2', 'sb2', 'sc2']:
@@ -1044,6 +1096,8 @@ def know_sc1():
         merge_sum_value('sa3', 'sc4', 'sc1', 1)
     
 def know_sa2():
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
     sa2_sa4_sa5(sa2, sa4, sa5)
 
     for i in ['sa1', 'sb1', 'sc1']:
@@ -1060,6 +1114,8 @@ def know_sa2():
         merge_sum_value('sa4', 'sa5', 'sc2', 1)
 
 def know_sb2():
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
     sb2_sb4_sb5(sb2, sb4, sb5)
 
     for i in ['sa1', 'sb1', 'sc1']:
@@ -1076,6 +1132,8 @@ def know_sb2():
         merge_sum_value('sb4', 'sb5', 'sc2', 1)
 
 def know_sc2():
+    check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
     if check_parallel(sc2, ['sb1', 'sa3', 'sc4']):
         equal(b2, 'd2')
 
