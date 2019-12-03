@@ -119,8 +119,6 @@ def set_perpendicular(name1, name2):
 
 #true if 2 angles, line segments, or areas are equal
 def set_equal(name1, name2): 
-    if name1 == 'b2' and name2 == 'd1':
-        raise
     initialize()
     if name1 == name2:
         return

@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     result = ''
     if form.getvalue('output'):
-        for i in range(1,4):
+        for i in range(1,5):
             predicate = form.getvalue('pred'+str(i))
             answer = form.getvalue('txt'+str(i)).split(',')
             if not form.getvalue('txt'+str(i)) or form.getvalue('txt'+str(i)) == '':
@@ -42,7 +42,7 @@ if __name__ == '__main__':
             <div class='predicates'>
               <h2>Inputs</h2>
               <form enctype='multipart/form-data' action='/test/cgi-bin/GeometryProblemSolver/M161_UI.py' method='post'>
-                    %s%s%s
+                    %s%s%s%s
                     <input type='hidden' name='output' value='output'>
                     <button type='submit' class='btn'>Get All</button>
               </form>
@@ -52,4 +52,4 @@ if __name__ == '__main__':
                 <p>%s</p>
             </div>
         </div>""" % (css.p1_diagram, s.format('pred1', 'txt1'), s.format('pred2', 'txt2'), 
-                s.format('pred3', 'txt3'), result))
+                s.format('pred3', 'txt3'), s.format('pred4', 'txt4'), result))
