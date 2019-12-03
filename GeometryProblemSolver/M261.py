@@ -31,15 +31,15 @@ d4 = Angle('d4'); d5 = Angle('d5'); d6 = Angle('d6')
 
 angles = [a1, b1, c1, a2, b2, c2, d1, d2, d3, d4, d5]
 
-output = {
-        'parallel': [],
-        'perpendicular': [],
-        'equal': [],
-        'fraction': [],
-        'sum_value': [],
-        'similar': [],
-        'congruent': []
-    }
+output = {}
+        # 'parallel': [],
+        # 'perpendicular': [],
+        # 'equal': [],
+        # 'fraction': [],
+        # 'sum_value': [],
+        # 'similar': [],
+        # 'congruent': []
+    # }
 
 init = True
 
@@ -79,12 +79,17 @@ def is_same_edge(n1, n2):
 #When a “parallel” predicate is given
 def set_parallel(name1, name2):
     initialize()
-    if name1 in globals()[name2].parallel:
-        return
+    # if name1 in globals()[name2].parallel:
+    #     return
     if is_same_edge(name1, name2) or is_same_edge(name2, name1):
         return
     # add pair to output and add to objects parallel list
-    output['parallel'].append([name1, name2]) 
+    if 'parallel' in output:
+        if name1 in globals()[name2].parallel:
+            return
+        output['parallel'].append([name1, name2]) 
+    else:
+        output['parallel'] = [[name1, name2]]
     x = globals()[name1].parallel
     x.append(name2)
     y = globals()[name2].parallel
@@ -99,9 +104,14 @@ def set_parallel(name1, name2):
 # true is 2 line segments are perpendicular
 def set_perpendicular(name1, name2): 
     initialize()
-    if name1 in globals()[name2].perpendicular:
-        return
-    output['perpendicular'].append([name1, name2]) 
+    # if name1 in globals()[name2].perpendicular:
+    #     return
+    if 'perpendicular' in output:
+        if name1 in globals()[name2].perpendicular:
+            return
+        output['perpendicular'].append([name1, name2]) 
+    else:
+        output['perpendicular'] = [[name1, name2]]
     x = globals()[name1].perpendicular
     x.append(name2)
     y = globals()[name2].perpendicular
@@ -113,9 +123,14 @@ def set_perpendicular(name1, name2):
 #true if 2 angles, line segments, or areas are equal
 def set_equal(name1, name2): 
     initialize()
-    if name1 in globals()[name2].equal:
-        return
-    output['equal'].append([name1, name2]) 
+    # if name1 in globals()[name2].equal:
+    #     return
+    if 'equal' in output:
+        if name1 in globals()[name2].equal:
+            return
+        output['equal'].append([name1, name2]) 
+    else:
+        output['equal'] = [[name1, name2]]
     x = globals()[name1].equal
     x.append(name2)
     y = globals()[name2].equal
@@ -132,9 +147,14 @@ def set_equal(name1, name2):
 # satisfy the relationship name1=fraction*name2
 def set_fraction(name1, name2, fraction): 
     initialize()
-    if name1 in globals()[name2].fraction: # and fraction in globals()[name2].fraction[name1]:
-        return
-    output['fraction'].append([name1, name2, fraction])
+    # if name1 in globals()[name2].fraction: # and fraction in globals()[name2].fraction[name1]:
+    #     return
+    if 'fraction' in output:
+        if name1 in globals()[name2].fraction: # and fraction in globals()[name2].fraction[name1]:
+            return
+        output['fraction'].append([name1, name2, fraction])
+    else:
+        output['fraction'] = [[name1, name2, fraction]]
     x = globals()[name1].fraction
     # if key exists in dict, append to list
     #if name2 in x and fraction not in x[name2]:
@@ -158,12 +178,17 @@ def set_fraction(name1, name2, fraction):
 # satisfy relationship name1+name2=sum
 def set_sum_value(name1, name2, sum_val):
     initialize()
-    if name1 in globals()[name2].sum_value and sum_val in globals()[name2].sum_value[name1]:
-        return
+    # if name1 in globals()[name2].sum_value and sum_val in globals()[name2].sum_value[name1]:
+    #     return
     if name1 == name2:
         return
+    if 'sum_value' in output:
+        if name1 in globals()[name2].sum_value and sum_val in globals()[name2].sum_value[name1]:
+            return
+        output['sum_value'].append([name1, name2, sum_val])
+    else:
+        output['sum_value'] = [[name1, name2, sum_val]]
 
-    output['sum_value'].append([name1, name2, sum_val])
     x = globals()[name1].sum_value
     if name2 in x and sum_val not in x[name2]:
         x[name2].append(sum_val)
@@ -182,7 +207,15 @@ def set_sum_value(name1, name2, sum_val):
 # true if 2 shapes similar
 # similar = corresponsing sides are proportional
 def set_similar(name1, name2):
-    output['similar'].append([name1, name2])
+    # if name1 in globals()[name2].similar:
+    #     return
+    if 'similar' in output:
+        if name1 in globals()[name2].similar:
+            return
+        output['similar'].append([name1, name2])
+    else:
+        output['similar'] = [[name1, name2]]
+    
     x = globals()[name1].similar
     x.append(name2)
     y = globals()[name2].similar
@@ -195,7 +228,14 @@ def set_similar(name1, name2):
 # true if 3 shapes are congruent 
 # congruent = same shape and size, but rotated, reflected and/or translated
 def set_congruent(name1, name2):
-    output['congruent'].append([name1, name2])
+
+    if 'congruent' in output:
+        if name1 in globals()[name2].congruent:
+            return
+        output['congruent'].append([name1, name2])
+    else:
+        output['congruent'] = [[name1, name2]]
+    
     x = globals()[name1].congruent
     x.append(name2)
     y = globals()[name2].congruent

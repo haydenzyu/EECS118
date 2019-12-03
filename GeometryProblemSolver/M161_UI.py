@@ -17,13 +17,16 @@ if __name__ == '__main__':
 
     result = ''
     if form.getvalue('output'):
-        predicate = form.getvalue('pred1')
-        answer = form.getvalue('txt1').split(',')
-        func = predicates.get(predicate, "not valid")
-        if predicate == 'set_sum_value' or predicate == 'set_fraction':
-            func(answer[0], answer[1], answer[2])
-        else:
-            func(answer[0], answer[1])
+        for i in range(1,4):
+            predicate = form.getvalue('pred'+str(i))
+            answer = form.getvalue('txt'+str(i)).split(',')
+            if not form.getvalue('txt'+str(i)) or form.getvalue('txt'+str(i)) == '':
+                continue
+            func = predicates.get(predicate, "not valid")
+            if predicate == 'set_sum_value' or predicate == 'set_fraction':
+                func(answer[0], answer[1], int(answer[2]))
+            else:
+                func(answer[0], answer[1])
         result = get_all()
 
     print("<h1>Geometry Problem Solver</h1>")
