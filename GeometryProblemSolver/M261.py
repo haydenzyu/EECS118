@@ -69,8 +69,8 @@ def is_same_edge(n1, n2):
 #When a “parallel” predicate is given
 def set_parallel(name1, name2):
     initialize()
-    # if name1 in globals()[name2].parallel:
-    #     return
+    if name1 == name2:
+        return
     if is_same_edge(name1, name2) or is_same_edge(name2, name1):
         return
     # add pair to output and add to objects parallel list
@@ -94,8 +94,8 @@ def set_parallel(name1, name2):
 # true is 2 line segments are perpendicular
 def set_perpendicular(name1, name2): 
     initialize()
-    # if name1 in globals()[name2].perpendicular:
-    #     return
+    if name1 == name2:
+        return
     if 'perpendicular' in output:
         if name1 in globals()[name2].perpendicular:
             return
@@ -137,8 +137,8 @@ def set_equal(name1, name2):
 # satisfy the relationship name1=fraction*name2
 def set_fraction(name1, name2, fraction): 
     initialize()
-    # if name1 in globals()[name2].fraction: # and fraction in globals()[name2].fraction[name1]:
-    #     return
+    if name1 == name2:
+        return
     if 'fraction' in output:
         if name1 in globals()[name2].fraction: # and fraction in globals()[name2].fraction[name1]:
             return
@@ -160,8 +160,6 @@ def set_fraction(name1, name2, fraction):
 # satisfy relationship name1+name2=sum
 def set_sum_value(name1, name2, sum_val):
     initialize()
-    # if name1 in globals()[name2].sum_value and sum_val in globals()[name2].sum_value[name1]:
-    #     return
     if name1 == name2:
         return
     if 'sum_value' in output:
@@ -189,8 +187,8 @@ def set_sum_value(name1, name2, sum_val):
 # true if 2 shapes similar
 # similar = corresponsing sides are proportional
 def set_similar(name1, name2):
-    # if name1 in globals()[name2].similar:
-    #     return
+    if name1 == name2:
+        return
     if 'similar' in output:
         if name1 in globals()[name2].similar:
             return
@@ -210,7 +208,8 @@ def set_similar(name1, name2):
 # true if 3 shapes are congruent 
 # congruent = same shape and size, but rotated, reflected and/or translated
 def set_congruent(name1, name2):
-
+    if name1 == name2:
+        return
     if 'congruent' in output:
         if name1 in globals()[name2].congruent:
             return
@@ -1469,3 +1468,36 @@ def sb1_sa3_sc4(known, a, b):
         merge_sum_value('b2', 'd3', 90, 0)
         # check_perpendicular(a, ['sc2'], True)
         # check_perpendicular(b, ['sc2'], True)
+
+if __name__ == '__main__':
+    print("""\nGeometry Problem M Solver
+    Problem 2
+    The intersections are on two different sides
+    Only one vertex of a triangle is inside another triangle\n
+    1. set_parallel(a,b)
+    2. set_perpendicular(a,b)
+    3. set_equal(a,b)
+    4. set_sum_value(a,b,sum)
+    5. set_fraction(a,b,fraction)
+        """)
+    for i in range(0, 10):
+        pred = input("Please enter the number for a predicate: ")
+        inputs = input("Now enter the parameters of the input separated by commas with no spaces: ")
+        params = str(inputs).split(',')
+
+        if pred == '1' and len(params) == 2:
+            set_parallel(params[0], params[1])
+        if pred == '2' and len(params) == 2:
+            set_perpendicular(params[0], params[1])
+        if pred == '3' and len(params) == 2:
+            set_equal(params[0], params[1])
+        if pred == '4' and len(params) == 3:
+            set_sum_value(params[0], params[1], int(params[2]))
+        if pred == '5' and len(params) == 3:
+            set_fraction(params[0], params[1], int(params[2]))
+
+        cont = input("Would you like to add another input? [y/n] ")
+        if cont == 'n':
+            break
+    print('\nOutput:')
+    print(get_all())

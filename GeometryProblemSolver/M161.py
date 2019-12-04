@@ -1,5 +1,3 @@
-# from objects import *
-
 class Part:
     def __init__(self, name):
         self.name = name
@@ -75,8 +73,8 @@ def is_same_edge(n1, n2):
 #When a “parallel” predicate is given
 def set_parallel(name1, name2):
     initialize()
-    # if name1 in globals()[name2].parallel:
-    #     return
+    if name1 == name2:
+        return
     if is_same_edge(name1, name2) or is_same_edge(name2, name1):
         return
     # add pair to output and add to objects parallel list
@@ -100,9 +98,8 @@ def set_parallel(name1, name2):
 # true is 2 line segments are perpendicular
 def set_perpendicular(name1, name2): 
     initialize()
-
-    # if name1 in globals()[name2].perpendicular:
-    #     return
+    if name1 == name2:
+        return
     if 'perpendicular' in output:
         if name1 in globals()[name2].perpendicular:
             return
@@ -144,8 +141,8 @@ def set_equal(name1, name2):
 # satisfy the relationship name1=fraction*name2
 def set_fraction(name1, name2, fraction): 
     initialize()
-    # if name1 in globals()[name2].fraction: # and fraction in globals()[name2].fraction[name1]:
-    #     return
+    if name1 == name2:
+        return
     if 'fraction' in output:
         if name1 in globals()[name2].fraction: # and fraction in globals()[name2].fraction[name1]:
             return
@@ -167,8 +164,6 @@ def set_fraction(name1, name2, fraction):
 # satisfy relationship name1+name2=sum
 def set_sum_value(name1, name2, sum_val):
     initialize()
-    # if name1 in globals()[name2].sum_value and sum_val in globals()[name2].sum_value[name1]:
-    #     return
     if name1 == name2:
         return
     if 'sum_value' in output:
@@ -196,8 +191,8 @@ def set_sum_value(name1, name2, sum_val):
 # true if 2 shapes similar
 # similar = corresponsing sides are proportional
 def set_similar(name1, name2):
-    # if name1 in globals()[name2].similar:
-    #     return
+    if name1 == name2:
+        return
     if 'similar' in output:
         if name1 in globals()[name2].similar:
             return
@@ -217,6 +212,8 @@ def set_similar(name1, name2):
 # true if 3 shapes are congruent 
 # congruent = same shape and size, but rotated, reflected and/or translated
 def set_congruent(name1, name2):
+    if name1 == name2:
+        return
     if 'congruent' in output:
         if name1 in globals()[name2].congruent:
             return
@@ -1627,7 +1624,6 @@ def sc4_sa1_sb2(known, a, b):
         merge_sum_value('b1', 'a1', 'c1', 1)
         merge_sum_value('a3', 'c2', 90, 0)
         merge_sum_value('a3', 'c2', 'c1', 1)
-#         #merge_sum_value('a1', 'b1', 'c1', 1)
     
     if check_perpendicular(known, 'sc3', False):
         check = c2.right_angle
@@ -1636,7 +1632,6 @@ def sc4_sa1_sb2(known, a, b):
         merge_sum_value('c1', 'a3', 'c2', 1)
         merge_sum_value('a2', 'b2', 90, 0)
         merge_sum_value('a2', 'b2', 'c2', 1)
-#         #merge_sum_value('a1', 'c1', 'b1', 1)
     
     if check_perpendicular(known, 'sa4', False):
         check = b1.right_angle
@@ -1645,7 +1640,6 @@ def sc4_sa1_sb2(known, a, b):
         merge_sum_value('a2', 'c3', 'b1', 1)
         merge_sum_value('a1', 'c1', 90, 0)
         merge_sum_value('a1', 'c1', 'b1', 1)
-#         know_b2()
 
     if check_perpendicular(known, 'sb4', False):
         check = a2.right_angle
@@ -1654,11 +1648,8 @@ def sc4_sa1_sb2(known, a, b):
         merge_sum_value('b1', 'c3', 'a2', 1)
         merge_sum_value('b2', 'c2', 90, 0)
         merge_sum_value('b2', 'c2', 'a2', 1)
-#         know_a2()
 
 def sc3_sb5_sa2(known, a, b):
-#     if check_parallel(known, ['sc2']):
-#         equal(a2, 'd5')
 
     if check_parallel(known, ['sa4', 'sa6', 'sc1']):
         equal(a3, 'd1'); equal(c3, 'd2'); equal(b1, 'c2')
@@ -1668,9 +1659,6 @@ def sc3_sb5_sa2(known, a, b):
         b4.right_angle = True; b4.angle = 90; set_angle(b4, check)
         merge_sum_value('a3', 'c4', 90, 0)
         merge_sum_value('a3', 'c4', 'b4', 1)
-#         #check_perpendicular(a, 'sa3', True)
-#         #check_perpendicular(b, 'sa3', True)
-#         know_b4()
     
     if check_perpendicular(known, 'sb3', False): 
         check = a3.right_angle
@@ -1680,10 +1668,6 @@ def sc3_sb5_sa2(known, a, b):
         merge_sum_value('c1', 'c2', 90, 0)
         merge_sum_value('c1', 'c2', 'a3', 1)
         
-#         #check_perpendicular(a, 'sb1', True)
-#         #check_perpendicular(b, 'sb1', True)
-#         know_a1()
-
     if check_perpendicular(known, 'sb4', False):
         check = d2.right_angle
         d2.right_angle = True; d2.angle = 90; set_angle(d2, check)
@@ -1694,10 +1678,6 @@ def sc3_sb5_sa2(known, a, b):
         equal(d2, 'd4')
         merge_sum_value('a2', 'c2', 90, 0)
         merge_sum_value('a2', 'c2', 'b2', 1)
-#         set_angle(d4)
-#         know_d6()
-#         #check_perpendicular(a, ['sb2', 'sb4', 'sb5'], True)
-#         #check_perpendicular(b, ['sb2', 'sb4', 'sb5'], True)
 
     if check_perpendicular(known, 'sc4', False):
         merge_sum_value('a2', 'b2', 90, 0)
@@ -1707,8 +1687,6 @@ def sc3_sb5_sa2(known, a, b):
         merge_sum_value('c1', 'a3', 'c2', 1)  
         merge_sum_value('a2', 'b2', 90, 0)
         merge_sum_value('a2', 'b2', 'c2', 1)     
-#         # check_perpendicular(a, ['sc2'], True)
-#         # check_perpendicular(b, ['sc2'], True)
 
 def sa4_sa6_sc1(known, a, b):
     if check_parallel(known, ['sa3']):
@@ -1724,18 +1702,12 @@ def sa4_sa6_sc1(known, a, b):
         merge_sum_value('a2', 'c3', 'b1', 1)
         merge_sum_value('a1', 'c1', 90, 0)
         merge_sum_value('a1', 'c1', 'b1', 1)
-#         # check_perpendicular(a, ['sc2'], True)
-#         # check_perpendicular(b, ['sc2'], True)
-#         know_b2()
 
     if check_perpendicular(known, 'sb4', False):
         check = c3.right_angle
         c3.right_angle = True; c3.angle = 90; set_angle(c3, check)
         merge_sum_value('a2', 'b1', 90, 0)
         merge_sum_value('a2', 'b1', 'c3', 1)
-#         # check_perpendicular(a, ['sb2', 'sb4', 'sb5'], True)
-#         # check_perpendicular(b, ['sb2', 'sb4', 'sb5'], True)
-#         know_c2()
 
     if check_perpendicular(known, 'sb3', False):
         check = d1.right_angle
@@ -1747,18 +1719,11 @@ def sa4_sa6_sc1(known, a, b):
         equal(d1, 'd3')
         merge_sum_value('b1', 'c1', 90, 0)
         merge_sum_value('b1', 'c1', 'a1', 1)
-#         set_angle(d1)
-#         know_d3()
-#         # check_perpendicular(a, ['sb1', 'sa3', 'sc4'], True)
-#         # check_perpendicular(a, ['sb1', 'sa3', 'sc4'], True)
 
     if check_perpendicular(known, 'sa3', False):
         merge_sum_value('c4', 'd1', 90, 0)
-#         # check_perpendicular(a, ['sa1'], True)
-#         # check_perpendicular(b, ['sa1'], True)
 
 def sb4_sb6_sc2(known, a, b):
-# def sb2_sb4_sb5(known, a, b):
     if check_parallel(known, ['sa3']):
         equal(b4, 'd4') 
 
@@ -1772,18 +1737,12 @@ def sb4_sb6_sc2(known, a, b):
         merge_sum_value('b1', 'c3', 'a2', 1)
         merge_sum_value('b2', 'c2', 90, 0)
         merge_sum_value('b2', 'c2', 'a2', 1)
-#         # check_perpendicular(a, ['sc2'], True)
-#         # check_perpendicular(b, ['sc2'], True)
-#         know_a2()
 
     if check_perpendicular(known, 'sa4', False):
         check = c3.right_angle
         c3.right_angle = True; c3.angle = 90; set_angle(c3, check)
         merge_sum_value('a2', 'b1', 90, 0)
         merge_sum_value('a2', 'b1', 'c3', 1)
-#         # check_perpendicular(a, ['sa2', 'sa4', 'sa5'], True)
-#         # check_perpendicular(a, ['sa2', 'sa4', 'sa5'], True)
-#         know_c2()
 
     if check_perpendicular(known, 'sc3', False):
         check = d2.right_angle
@@ -1795,31 +1754,19 @@ def sb4_sb6_sc2(known, a, b):
         equal(d2, 'd4')
         merge_sum_value('a2', 'c2', 90, 0)
         merge_sum_value('a2', 'c2', 'b2', 1)
-#         set_angle(d4)
-#         know_d6()
-#         # check_perpendicular(a, ['sc1', 'sb3', 'sd4'], True)
-#         # check_perpendicular(a, ['sc1', 'sb3', 'sd4'], True)
 
     if check_perpendicular(known, 'sa3', False):
         merge_sum_value('b4', 'd2', 90, 0)
-#         # check_perpendicular(a, ['sa1'], True)
-#         # check_perpendicular(b, ['sa1'], True)
 
 def sb3_sa5_sb1(known, a, b):
     if check_parallel(known, ['sb4', 'sb6', 'sc2']):
         equal(a3, 'd2'); equal(c3, 'a1'); equal(c1, 'a2')
-    
-#     if check_parallel(known, ['sc2']):
-#         equal(b2, 'd2')
-    
+
     if check_perpendicular(known, 'sa3', False):
         check = c4.right_angle
         c4.right_angle = True; c4.angle = 90; set_angle(c4, check)
         merge_sum_value('a3', 'b4', 90, 0)
         merge_sum_value('a3', 'b4', 'c4', 0)
-        # check_perpendicular(a, ['sa3'], True)
-        # check_perpendicular(b, ['sa3'], True)
-        # know_c4()
 
     if check_perpendicular(known, 'sc3', False): 
         check = a3.right_angle
@@ -1828,9 +1775,6 @@ def sb3_sa5_sb1(known, a, b):
         merge_sum_value('b4', 'c4', 'a3', 1)
         merge_sum_value('c1', 'c2', 90, 0)
         merge_sum_value('c1', 'c2', 'a3', 1)
-        # check_perpendicular(a, ['sc1', 'sb3', 'sd4'], True)
-        # check_perpendicular(b, ['sc1', 'sb3', 'sd4'], True)
-        # know_a3()
 
     if check_perpendicular(known, 'sa4', False):
         check = d1.right_angle
@@ -1842,10 +1786,6 @@ def sb3_sa5_sb1(known, a, b):
         equal(d1, 'a1')
         merge_sum_value('b1', 'c1', 90, 0)
         merge_sum_value('b1', 'c1', 'a1', 1)
-#         set_angle(d1)
-#         know_d3()
-#         # check_perpendicular(a, ['sa2', 'sa4', 'sa5'], True)
-#         # check_perpendicular(b, ['sa2', 'sa4', 'sa5'], True)
 
     if check_perpendicular(known, 'sc4', False):
         merge_sum_value('b1', 'a1', 90, 0)
@@ -1855,5 +1795,36 @@ def sb3_sa5_sb1(known, a, b):
         merge_sum_value('a1', 'b1', 'c1', 1)
         merge_sum_value('a3', 'c2', 90, 0)
         merge_sum_value('a3', 'c2', 'c1', 1)
-#         # check_perpendicular(a, ['sc2'], True)
-#         # check_perpendicular(b, ['sc2'], True)
+
+if __name__ == '__main__':
+    print("""\nGeometry Problem M Solver
+    Problem 1
+    Three intersections are on three different sides of a triangle
+    No side of a triangle is completely inside another triangle\n
+    1. set_parallel(a,b)
+    2. set_perpendicular(a,b)
+    3. set_equal(a,b)
+    4. set_sum_value(a,b,sum)
+    5. set_fraction(a,b,fraction)
+        """)
+    for i in range(0, 10):
+        pred = input("Please enter the number for a predicate: ")
+        inputs = input("Now enter the parameters of the input separated by commas with no spaces: ")
+        params = str(inputs).split(',')
+
+        if pred == '1' and len(params) == 2:
+            set_parallel(params[0], params[1])
+        if pred == '2' and len(params) == 2:
+            set_perpendicular(params[0], params[1])
+        if pred == '3' and len(params) == 2:
+            set_equal(params[0], params[1])
+        if pred == '4' and len(params) == 3:
+            set_sum_value(params[0], params[1], int(params[2]))
+        if pred == '5' and len(params) == 3:
+            set_fraction(params[0], params[1], int(params[2]))
+
+        cont = input("Would you like to add another input? [y/n] ")
+        if cont == 'n':
+            break
+    print('\nOutput:')
+    print(get_all())
