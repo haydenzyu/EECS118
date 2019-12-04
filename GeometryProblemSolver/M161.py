@@ -309,6 +309,15 @@ def check_angles(a):
     for angle in angles:
         if angle.name != a.name and angle.angle == a.angle and a.angle != 0:
             equal(angle, a.name)
+        if angle.name != a.name and angle.angle != 0 and a.angle != 0:
+            merge_sum_value(a.name, angle.name, a.angle+angle.angle, 0)
+    for item in a.sum_value:
+        if globals()[item].angle != 0:
+            for value in a.sum_value:
+                if type(value) == int:
+                    a.angle = value - globals()[item].angle
+                    globals()['know_'+a.name]()
+                    break
 
 def check_right_angle(angle, name1, name2, s1, s2):
     if angle.right_angle:
@@ -338,7 +347,7 @@ def know_b1():
         merge_sum_value('a1', 'c1', 'b1', 1)
         merge_sum_value('a2', 'c3', 90, 0)
         merge_sum_value('a2', 'c3', 'b1', 1)
-        check_perpendicular('sa4', 'sc4', True)
+        check_perpendicular(sa4, 'sc4', True)
 
     if 'c1' in b1.equal:
         equal(sb1, 'sc1')
@@ -366,19 +375,25 @@ def know_b1():
         merge_sum_value('c2', 'a3', 'c1', 1)
         check_perpendicular(sb3, 'sc4', True)
 
-    if 'c1' in b1.sum_value and 90 in b1.sum_value['c1']:
-        check = a1.right_angle
-        a1.right_angle = True; a1.angle = 90; set_angle(a1, check)
-        check_perpendicular(sb3, 'sa4', True)
+    if 'c1' in b1.sum_value:
+        if 90 in b1.sum_value['c1']:
+            check = a1.right_angle
+            a1.right_angle = True; a1.angle = 90; set_angle(a1, check)
+            check_perpendicular(sb3, 'sa4', True)
+        equal_angles('c1', b1, a1)
 
-    if 'a2' in b1.sum_value and 90 in b1.sum_value['a2']:
-        check = c3.right_angle
-        c3.right_angle = True; c3.angle = 90; set_angle(c3, check)
-    if 'c3' in b1.sum_value and 90 in b1.sum_value['c3']:
-        check = a2.right_angle
-        a2.right_angle = True; a2.angle = 90; set_angle(a2, check)
+    if 'a2' in b1.sum_value:
+        if 90 in b1.sum_value['a2']:
+            check = c3.right_angle
+            c3.right_angle = True; c3.angle = 90; set_angle(c3, check)
+        equal_angles('a2', b1, c3)
+    if 'c3' in b1.sum_value:
+        if 90 in b1.sum_value['c3']:
+            check = a2.right_angle
+            a2.right_angle = True; a2.angle = 90; set_angle(a2, check)
         #merge_sum_value('c1', 'c2', 90, 0)
         #merge_sum_value('c1', 'c2', 'a3', 1)
+        equal_angles('c3', b1, a2)
     
     if 'd1' in b1.sum_value or 'a1' in b1.sum_value:
         if 'a1' in b1.sum_value:
@@ -403,6 +418,7 @@ def know_b1():
                 else:
                     x = 0
                 merge_sum_value('b1', 'd1', item, x)
+        equal_angles(i, b1, c1)
 
     if 'd3' in b1.sum_value and 180 in b1.sum_value['d3']:
         equal(c3, 'd1')
@@ -446,6 +462,16 @@ def c1_c2(known, a1, a1opp, a1adj, b1, a2, b2, sn, sa, sb, s1, s2, a3):
     if a3 in known.equal:
         set_parallel('sa3', 'sc4')
 
+def equal_angles(a, b, c):
+    for item in b.sum_value[a]:
+        if type(item) == int and c.angle == 0:
+            c.angle = 180 - item
+            globals()['know_'+c.name]()
+            if b.angle != 0:
+                merge_sum_value(b.name, c.name, b.angle+c.angle, 0)
+            if globals()[a].angle != 0:
+                merge_sum_value(globals()[a].name, c.name, globals()[a].angle+c.angle, 0)
+
 def know_c1():
     c1_c2(c1, 'a1', 'd1', 'd3', 'b1', 'a3', 'c2', sc1, 'sa1', 'sb1', sb3, 'sc4', 'c4')
 
@@ -456,6 +482,15 @@ def know_c1():
     if 'a2' in c1.equal:
         set_parallel('sb3', 'sb4')
         equal(a3, 'd2'); equal(a1, 'c3')
+
+    if 'a1' in c1.sum_value or 'd1' in c1.sum_value:
+        if 'a1' in c1.sum_value:
+            i = 'a1'
+        else:
+            i = 'd1'
+        equal_angles(i, c1, b1)
+    if 'b1' in c1.sum_value:
+        equal_angles('b1', c1, a1)
 
 def know_a2():
     check_angles(a2)
@@ -500,20 +535,26 @@ def know_a2():
         merge_sum_value('c1', 'a3', 'c2', 1)
         check_perpendicular(sc3, 'sc4', True)
 
-    if 'c2' in a2.sum_value and 90 in a2.sum_value['c2']:
-        check = b2.right_angle
-        b2.right_angle = True; b2.angle = 90; set_angle(b2, check)
-        check_perpendicular(sc3, 'sb4', True)
+    if 'c2' in a2.sum_value:
+        if 90 in a2.sum_value['c2']:
+            check = b2.right_angle
+            b2.right_angle = True; b2.angle = 90; set_angle(b2, check)
+            check_perpendicular(sc3, 'sb4', True)
+        equal_angles('c2', a2, b2)
 
-    if 'b1' in a2.sum_value and 90 in a2.sum_value['b1']:
-        check = c3.right_angle
-        c3.right_angle = True; c3.angle = 90; set_angle(c3, check)
-    if 'c3' in a2.sum_value and 90 in a2.sum_value['c3']:
-        check = b1.right_angle
-        b1.right_angle = True; b1.angle = 90; set_angle(b1, check)
-        merge_sum_value('a1', 'c1', 90, 0)
-        merge_sum_value('a1', 'c1', 'b1', 1)
-    
+    if 'b1' in a2.sum_value:
+        if 90 in a2.sum_value['b1']:
+            check = c3.right_angle
+            c3.right_angle = True; c3.angle = 90; set_angle(c3, check)
+        equal_angles('b1', a2, c3)
+    if 'c3' in a2.sum_value:
+        if 90 in a2.sum_value['c3']:
+            check = b1.right_angle
+            b1.right_angle = True; b1.angle = 90; set_angle(b1, check)
+            merge_sum_value('a1', 'c1', 90, 0)
+            merge_sum_value('a1', 'c1', 'b1', 1)
+        equal_angles('c3', a2, b1)
+
     if 'd2' in a2.sum_value or 'b2' in a2.sum_value:
         if 'd2' in a2.sum_value:
             i = 'd2'
@@ -537,6 +578,7 @@ def know_a2():
                 else:
                     x = 0
                 merge_sum_value('a2', 'd2', item, x)
+        equal_angles(i, a2, c2)
 
     if 'd4' in a2.sum_value and 180 in a2.sum_value['d4']:
         equal(a2, 'd2')
@@ -558,6 +600,13 @@ def know_c2():
     if 'b1' in c2.equal:
         set_parallel('sc3', 'sa4')
         equal(a3, 'd1'); equal(b2, 'c3')
+
+    if 'b2' in c2.sum_value or 'd2' in b2.sum_value:
+        if 'b2' in c2.sum_value:
+            i = 'b2'
+        else:
+            i = 'd2'
+        equal_angles(i, c2, a2)
 
 def know_a3():
     check_angles(a3)
@@ -595,12 +644,16 @@ def know_a3():
     if 'd4' in a3.equal:
         merge_sum_value('a3', 'd2', 180, 0)
     
-    if 'b4' in a3.sum_value and 90 in a3.sum_value['b4']:
-        check = c4.right_angle
-        c4.right_angle = True; c4.angle = 90; set_angle(c4, check)
-    if 'c4' in a3.sum_value and 90 in a3.sum_value['c4']:
-        check = b4.right_angle
-        b4.right_angle = True; b4.angle = 90; set_angle(b4, check)
+    if 'b4' in a3.sum_value:
+        if 90 in a3.sum_value['b4']:
+            check = c4.right_angle
+            c4.right_angle = True; c4.angle = 90; set_angle(c4, check)
+        equal_angles('b4', a3, c4)
+    if 'c4' in a3.sum_value:
+        if 90 in a3.sum_value['c4']:
+            check = b4.right_angle
+            b4.right_angle = True; b4.angle = 90; set_angle(b4, check)
+        equal_angles('c4', a3, b4)
     if 'c3' in a3.sum_value:
         for item in a3.sum_value['c3']:
             if type(item) == int:
@@ -658,7 +711,7 @@ def know_a3():
         equal(a3, 'd4')
 
 def know_c3():
-    check_angles(a3)
+    check_angles(c3)
     check_right_angle(c3, 'a2', 'b1', sa4, 'sb4')
 
     check_triangle(a1, b1, c1, 'a2', 'b1', 'c3', sa1, sb1, sc1, 'sa4', 'sb4', 'sc4', 'ar1', 'ar4')
@@ -684,16 +737,20 @@ def know_c3():
     if 'd4' in c3.equal:
         merge_sum_value('c3', 'd2', 180, 0)
     
-    if 'a2' in c3.sum_value and 90 in c3.sum_value['a2']:
-        check = b1.right_angle
-        b1.right_angle = True; b1.angle = 90; set_angle(b1, check)
-        merge_sum_value('a1', 'c1', 90, 0)
-        merge_sum_value('a1', 'c1', 'b1', 1)
-    if 'b1' in c3.sum_value and 90 in c3.sum_value['b1']:
-        check = a2.right_angle
-        a2.right_angle = True; a2.angle = 90; set_angle(a2, check)
-        merge_sum_value('b2', 'c2', 90, 0)
-        merge_sum_value('b2', 'c2', 'a2', 1)
+    if 'a2' in c3.sum_value:
+        if 90 in c3.sum_value['a2']:
+            check = b1.right_angle
+            b1.right_angle = True; b1.angle = 90; set_angle(b1, check)
+            merge_sum_value('a1', 'c1', 90, 0)
+            merge_sum_value('a1', 'c1', 'b1', 1)
+        equal_angles('a2', c3, b1)
+    if 'b1' in c3.sum_value:
+        if 90 in c3.sum_value['b1']:
+            check = a2.right_angle
+            a2.right_angle = True; a2.angle = 90; set_angle(a2, check)
+            merge_sum_value('b2', 'c2', 90, 0)
+            merge_sum_value('b2', 'c2', 'a2', 1)
+        equal_angles('b1', c3, a2)
     if 'a3' in c3.sum_value:
         for item in c3.sum_value['a3']:
             if type(item) == int:
@@ -749,15 +806,18 @@ def know_b4():
         set_parallel('sa3', 'sb4')
         merge_sum_value('b4', 'd2', 180, 0)
     
-    if 'a3' in b4.sum_value and 90 in b4.sum_value['a3']:
-        check = c4.right_angle
-        c4.right_angle = True; c4.angle = 90; set_angle(c4, check)
-    if 'c4' in b4.sum_value and 90 in b4.sum_value['c4']:
-        check = a3.right_angle
-        a3.right_angle = True; a3.angle = 90; set_angle(a3, check)
-        merge_sum_value('c1', 'c2', 90, 0)
-        merge_sum_value('c1', 'c2', 'a3', 1)
-    
+    if 'a3' in b4.sum_value:
+        if 90 in b4.sum_value['a3']:
+            check = c4.right_angle
+            c4.right_angle = True; c4.angle = 90; set_angle(c4, check)
+        equal_angles('a3', b4, c4)
+    if 'c4' in b4.sum_value:
+        if 90 in b4.sum_value['c4']:
+            check = a3.right_angle
+            a3.right_angle = True; a3.angle = 90; set_angle(a3, check)
+            merge_sum_value('c1', 'c2', 90, 0)
+            merge_sum_value('c1', 'c2', 'a3', 1)
+        equal_angles('c4', b4, a3)
     if 'd2' in b4.sum_value or 'b2' in b4.sum_value:
         if 'd2' in b4.sum_value:
             i = 'd2'
@@ -809,15 +869,19 @@ def know_c4():
     if 'c1' in c4.equal:
         set_parallel('sa3', 'sc4')
 
-    if 'a3' in c4.sum_value and 90 in c4.sum_value['a3']:
-        check = b4.right_angle
-        b4.right_angle = True; b4.angle = 90; set_angle(b4, check)
-    if 'b4' in c4.sum_value and 90 in c4.sum_value['b4']:
-        check = a3.right_angle
-        a3.right_angle = True; a3.angle = 90; set_angle(a3, check)
-        merge_sum_value('c1', 'c2', 90, 0)
-        merge_sum_value('c1', 'c2', 'a3', 1)
-    
+    if 'a3' in c4.sum_value:
+        if 90 in c4.sum_value['a3']:
+            check = b4.right_angle
+            b4.right_angle = True; b4.angle = 90; set_angle(b4, check)
+        equal_angles('a3', c4, b4)
+    if 'b4' in c4.sum_value:
+        if 90 in c4.sum_value['b4']:
+            check = a3.right_angle
+            a3.right_angle = True; a3.angle = 90; set_angle(a3, check)
+            merge_sum_value('c1', 'c2', 90, 0)
+            merge_sum_value('c1', 'c2', 'a3', 1)
+        equal_angles('b4', c4, a3)
+        
     if 'd1' in c4.sum_value or 'a1' in c4.sum_value:
         if 'a1' in c4.sum_value:
             i = 'a1'
@@ -999,12 +1063,17 @@ def d1_a1(known, a, b, s1, s2):
         merge_sum_value('a1', 'b1', 90, 0)
         merge_sum_value('a1', 'b1', 'c1', 1)
     
-    if 'c1' in known.sum_value and 90 in known.sum_value['c1']:
-        check = b1.right_angle
-        b1.right_angle = True; b1.angle = 90; set_angle(b1, check)
-        check_perpendicular(sa4, 'sc4', True)
-        merge_sum_value('a2', 'c3', 90, 0)
-        merge_sum_value('a2', 'c3', 'b1', 1)
+    if 'c1' in known.sum_value:
+        if 90 in known.sum_value['c1']:
+            check = b1.right_angle
+            b1.right_angle = True; b1.angle = 90; set_angle(b1, check)
+            check_perpendicular(sa4, 'sc4', True)
+            merge_sum_value('a2', 'c3', 90, 0)
+            merge_sum_value('a2', 'c3', 'b1', 1)
+        equal_angles('c1', known, b1)
+
+    if 'b1' in known.sum_value:
+        equal_angles('b1', known, c1)
 
     if a.name in known.sum_value and 180 in known.sum_value[a.name]:
         check = d1.right_angle
@@ -1080,12 +1149,17 @@ def d2_b2(known, a, b, s1, s2):
         merge_sum_value('a2', 'b2', 90, 0)
         merge_sum_value('a2', 'b2', 'c2', 1)
 
-    if 'c2' in known.sum_value and 90 in known.sum_value['c2']:
-        check = a2.right_angle
-        a2.right_angle = True; a2.angle = 90; set_angle(a2, check)
-        check_perpendicular(sb4, 'sc4', True)
-        merge_sum_value('b1', 'c3', 90, 0)
-        merge_sum_value('b1', 'c3', 'a2', 1)
+    if 'c2' in known.sum_value:
+        if 90 in known.sum_value['c2']:
+            check = a2.right_angle
+            a2.right_angle = True; a2.angle = 90; set_angle(a2, check)
+            check_perpendicular(sb4, 'sc4', True)
+            merge_sum_value('b1', 'c3', 90, 0)
+            merge_sum_value('b1', 'c3', 'a2', 1)
+        equal_angles('c2', known, a2)
+    
+    if 'a2' in known.sum_value:
+        equal_angles('a2', known, c2)
     
     if a.name in known.sum_value and 180 in known.sum_value[a.name]:
         check = d4.right_angle
