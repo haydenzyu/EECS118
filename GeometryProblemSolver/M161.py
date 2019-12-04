@@ -601,7 +601,7 @@ def know_c2():
         set_parallel('sc3', 'sa4')
         equal(a3, 'd1'); equal(b2, 'c3')
 
-    if 'b2' in c2.sum_value or 'd2' in b2.sum_value:
+    if 'b2' in c2.sum_value or 'd2' in c2.sum_value:
         if 'b2' in c2.sum_value:
             i = 'b2'
         else:
@@ -1315,14 +1315,19 @@ def merge_fraction(a, b, c):
             if i != j:
                 set_fraction(i, j, c)  
     a = globals()[a]; b = globals()[b]
-    for i in b.fraction:
+    for i in list(b.fraction):
         frac = b.fraction[i]*c
         if frac > 1:
             set_fraction(a.name, i, frac) 
-    for i in a.fraction:
+        if frac == 1:
+            equal(a, i)
+    for i in list(a.fraction):
         frac = c/a.fraction[i]
+        print('[%s, %s: %d]' %(b.name, i, frac))
         if frac > 1:
             set_fraction(i, b.name, frac)
+        if frac == 1:
+            equal(b, i)
 
 def set_angle(a, check):
     if a.right_angle:
@@ -1555,7 +1560,7 @@ def know_sc2():
 
     if 'sb6' in sc2.fraction:
         if sc2.fraction['sb6'] > 1:
-            set_fraction('sb2', 'sb6', sc2.fraction['sb6']+1)
+            set_fraction('sb4', 'sb6', sc2.fraction['sb6']+1)
 
 def know_sc4():
     sc4_sa1_sb2(sc4, sa1, sb2)

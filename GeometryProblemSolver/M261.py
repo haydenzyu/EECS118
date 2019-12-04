@@ -1066,14 +1066,19 @@ def merge_fraction(a, b, c):
             if i != j:
                 set_fraction(i, j, c) 
     a = globals()[a]; b = globals()[b]
-    for i in b.fraction:
+    for i in list(b.fraction):
         frac = b.fraction[i]*c
         if frac > 1:
             set_fraction(a.name, i, frac) 
-    for i in a.fraction:
+        if frac == 1:
+            equal(a, i)
+    for i in list(a.fraction):
         frac = c/a.fraction[i]
+        print('[%s, %s: %d]' %(b.name, i, frac))
         if frac > 1:
             set_fraction(i, b.name, frac)
+        if frac == 1:
+            equal(b, i)
 
 def set_angle(a, check):
     if a.right_angle:
