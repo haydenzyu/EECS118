@@ -319,6 +319,16 @@ def check_angles(a):
                     globals()['know_'+a.name]()
                     break
 
+def equal_angles(a, b, c):
+    for item in b.sum_value[a]:
+        if type(item) == int and c.angle == 0:
+            c.angle = 180 - item
+            globals()['know_'+c.name]()
+            if b.angle != 0:
+                merge_sum_value(b.name, c.name, b.angle+c.angle, 0)
+            if globals()[a].angle != 0:
+                merge_sum_value(globals()[a].name, c.name, globals()[a].angle+c.angle, 0)
+
 def check_right_angle(angle, name1, name2, s1, s2):
     if angle.right_angle:
         set_sum_value(name1, name2, 90)
@@ -461,16 +471,6 @@ def c1_c2(known, a1, a1opp, a1adj, b1, a2, b2, sn, sa, sb, s1, s2, a3):
 
     if a3 in known.equal:
         set_parallel('sa3', 'sc4')
-
-def equal_angles(a, b, c):
-    for item in b.sum_value[a]:
-        if type(item) == int and c.angle == 0:
-            c.angle = 180 - item
-            globals()['know_'+c.name]()
-            if b.angle != 0:
-                merge_sum_value(b.name, c.name, b.angle+c.angle, 0)
-            if globals()[a].angle != 0:
-                merge_sum_value(globals()[a].name, c.name, globals()[a].angle+c.angle, 0)
 
 def know_c1():
     c1_c2(c1, 'a1', 'd1', 'd3', 'b1', 'a3', 'c2', sc1, 'sa1', 'sb1', sb3, 'sc4', 'c4')
