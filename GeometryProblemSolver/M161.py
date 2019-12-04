@@ -1827,4 +1827,7 @@ if __name__ == '__main__':
         if cont == 'n':
             break
     print('\nOutput:')
-    print(get_all())
+    result = get_all()
+    for item in result:
+        print(item+':')
+        print(result[item])

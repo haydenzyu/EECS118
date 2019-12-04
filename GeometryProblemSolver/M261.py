@@ -1459,15 +1459,9 @@ def sb1_sa3_sc4(known, a, b):
         check = d3.right_angle
         d3.right_angle = True; d3.angle = 90; set_angle(d3, check)
         equal(d1, 'd2')
-        # set_angle(d1)
-        # know_d3()
-        # check_perpendicular(a, ['sa2', 'sa4', 'sa5'], True)
-        # check_perpendicular(b, ['sa2', 'sa4', 'sa5'], True)
 
     if check_perpendicular(known, 'sc2', False):
         merge_sum_value('b2', 'd3', 90, 0)
-        # check_perpendicular(a, ['sc2'], True)
-        # check_perpendicular(b, ['sc2'], True)
 
 if __name__ == '__main__':
     print("""\nGeometry Problem M Solver
@@ -1500,4 +1494,7 @@ if __name__ == '__main__':
         if cont == 'n':
             break
     print('\nOutput:')
-    print(get_all())
+    result = get_all()
+    for item in result:
+        print(item+':')
+        print(result[item])
