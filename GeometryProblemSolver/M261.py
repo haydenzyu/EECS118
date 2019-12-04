@@ -113,8 +113,8 @@ def set_perpendicular(name1, name2):
 #true if 2 angles, line segments, or areas are equal
 def set_equal(name1, name2): 
     initialize()
-    # if name1 in globals()[name2].equal:
-    #     return
+    if name1 == name2:
+        return
     if 'equal' in output:
         if name1 in globals()[name2].equal:
             return
@@ -299,8 +299,13 @@ def check_right_angle(angle, name1, name2, s1, s2):
         set_sum_value(name1, name2, angle.name)
         check_perpendicular(s1, s2, True)
 
-def know_a1():
+def check_angles(a):
+    for angle in angles:
+        if angle.name != a.name and angle.angle == a.angle and a.angle != 0:
+            equal(angle, a.name)
 
+def know_a1():
+    check_angles(a1)
     check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
 
     # if a1 = 90, then b1+c1 = 90 because a1+b1+c1 = 180
@@ -369,6 +374,7 @@ def know_a1():
         equal(a1, 'd5')
 
 def know_b1():
+    check_angles(b1)
     # if b1 = 90, then b1+c1 = 90 because a1+b1+c1 = 180
     # check_corner_angle(b1, 'a1', 'c1')
     check_right_angle(b1, 'a1', 'c1', sa1, 'sc1')
@@ -424,6 +430,7 @@ def know_b1():
         equal(b1, 'd4')
 
 def know_c1():
+    check_angles(c1)
     # if c1 = 90, then b1+c1 = 90 because a1+b1+c1 = 180
     # check_corner_angle(c1, 'a1', 'b1')
     check_right_angle(c1, 'a1', 'b1', sa1, 'sb1')
@@ -477,6 +484,7 @@ def know_c1():
         equal(c1, 'd1')
 
 def know_a2():
+    check_angles(a2)
     # check_corner_angle(a2, 'b2', 'c2')
     check_right_angle(a2, 'b2', 'c2', sb2, 'sc2')
 
@@ -529,6 +537,7 @@ def know_a2():
         equal(a2, 'd4')
 
 def know_b2():
+    check_angles(b2)
     # check_corner_angle(b2, 'a2', 'c2')
     check_right_angle(b2, 'a2', 'c2', sa2, 'sc2')
 
@@ -581,6 +590,7 @@ def know_b2():
         equal(c2, 'd1')
 
 def know_c2():
+    check_angles(c2)
     # check_corner_angle(c2, 'a2', 'b2')
     check_right_angle(c2, 'a2', 'b2', sa2, 'sb2')
 
@@ -654,6 +664,7 @@ def check_d_angles(known, adj, opp, n1, n2):
         check_perpendicular(n1, n2, True)
 
 def d1_d3(known, a, b, s1, s2):
+    check_angles(known)
     check_d_angles(d1, d2, d3, sb1, 'sa2')
 
     if 'd2' in known.equal:
@@ -715,6 +726,7 @@ def d1_d3(known, a, b, s1, s2):
         merge_sum_value('d2', 'd4', 180, 0)
 
 def d4_d6(known, a, b, s1, s2):
+    check_angles(known)
     check_d_angles(d4, d5, d6, sc1, 'sb2')
 
     if 'd5' in known.equal:
@@ -779,6 +791,7 @@ def know_d1():
     d1_d3(d1, d3, 'c1', sa1, 'sa2')
 
 def know_d2():
+    check_angles(d2)
     check_d_angles(d1, d2, d3, sb1, 'sa2')
 
     if 'd1' in d2.equal or 'd3' in d2.equal:
@@ -840,6 +853,7 @@ def know_d4():
     d4_d6(d4, d6, 'b1', sa1, 'sb2')
 
 def know_d5():
+    check_angles(d5)
     check_d_angles(d4, d5, d6, sc1, 'sb2')
 
     if 'd4' in d5.equal or 'd6' in d5.equal:
