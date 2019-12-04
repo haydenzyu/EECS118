@@ -359,7 +359,7 @@ def know_a1():
         if 90 in a1.sum_value['c1']:
             check = b1.right_angle
             b1.right_angle = True; b1.angle = 90; set_angle(b1, check)
-        equal_angles('c1', a1, s1)
+        equal_angles('c1', a1, b1)
     if 'c2' in a1.sum_value:
         for item in a1.sum_value['c2']:
             if type(item) == int:
@@ -1064,7 +1064,16 @@ def merge_fraction(a, b, c):
     for i in [a]+globals()[a].equal:
         for j in [b]+globals()[b].equal: 
             if i != j:
-                set_fraction(i, j, c)  
+                set_fraction(i, j, c) 
+    a = globals()[a]; b = globals()[b]
+    for i in b.fraction:
+        frac = b.fraction[i]*c
+        if frac > 1:
+            set_fraction(a.name, i, frac) 
+    for i in a.fraction:
+        frac = c/a.fraction[i]
+        if frac > 1:
+            set_fraction(i, b.name, frac)
 
 def set_angle(a, check):
     if a.right_angle:
