@@ -6,6 +6,7 @@
 
 import networkx as nx
 
+#s is an array of tuples, ex. [('1','2'), ('2', '4')]
 def is_path(s, a, b): #returns true if s is a path between node a and node b
     #s is a set of edges
     #a is the starting point, b is end point
@@ -13,6 +14,7 @@ def is_path(s, a, b): #returns true if s is a path between node a and node b
     arr = []
     return check_path(s, a, b, arr)
 
+#s is an array of tuples, ex. [('1','2'), ('2', '4')]
 def check_path(s, a, b, arr):
     result = False
     for i in s: #i[x, y] -> i[y, y1] -> ... -> i[yn, b]
@@ -39,6 +41,7 @@ def check_path(s, a, b, arr):
         
     return result
 
+#s is an array of tuples, ex. [('1','2'), ('2', '4')]
 def color(s, k, n): #returns true if number of edges of color k in s is n
     cnt = 0
     #count how many edges have the color k
@@ -55,6 +58,7 @@ def color(s, k, n): #returns true if number of edges of color k in s is n
     else:
         return False
 
+#s is an array of tuples, ex. [('1','2'), ('2', '4')]
 def find_paths(s, a, b, l, l_c, input_color, C, cnt, a_1):
     adj_nodes = list(s.neighbors(a)) #find adjacent nodes to node a
     #print(a+"'s adjacent nodes"+str(adj_nodes))
