@@ -29,6 +29,8 @@ a2 = Angle('a2'); b2 = Angle('b2'); c2 = Angle('c2')
 d1 = Angle('d1'); d2 = Angle('d2'); d3 = Angle('d3')
 d4 = Angle('d4'); d5 = Angle('d5'); d6 = Angle('d6')
 
+items = [ar1, ar2, sa1, sb1, sc1, sa2, sb2, sc2, sa3, sb3, sa4, sb4, sc4, sd4, sa5, sb5,
+        a1, b1, c1, a2, b2, c2, d1, d2, d3, d4, d5]
 angles = [a1, b1, c1, a2, b2, c2, d1, d2, d3, d4, d5]
 
 output = {}
@@ -112,6 +114,8 @@ def set_perpendicular(name1, name2):
 
 #true if 2 angles, line segments, or areas are equal
 def set_equal(name1, name2): 
+    # if name1 == 'a1' and name2 == 'd4':
+    #     raise
     initialize()
     if name1 == name2:
         return
@@ -125,6 +129,16 @@ def set_equal(name1, name2):
     x.append(name2)
     y = globals()[name2].equal
     y.append(name1)
+
+    x = globals()[name1]; y = globals()[name2] 
+    if x in angles and x.angle != 0 and y.angle == 0:
+        y.angle = x.angle
+        if x.angle == 90 and not y.right_angle:
+            y.right_angle = True; set_angle(y, True)
+    elif y in angles and y.angle != 0 and x.angle == 0:
+        x.angle = y.angle
+        if y.angle == 90 and not x.right_angle:
+            x.right_angle = True; set_angle(x, True)
 
     merge_equals(globals()[name1], globals()[name2])
     merge_sums(globals()[name1], globals()[name2])
@@ -1052,7 +1066,7 @@ def merge_fracs(a, b):
     for key in list(a.fraction):
         if key not in b.fraction:
             if a.fraction[key] > 1:
-                set_fraction(key, b.name, a.fraction[key])
+                set_fraction(b.name, key, a.fraction[key])
         
     for key in list(b.fraction):
         if key not in a.fraction:
@@ -1062,7 +1076,7 @@ def merge_fracs(a, b):
 def merge_fraction(a, b, c):
     for i in [a]+globals()[a].equal:
         for j in [b]+globals()[b].equal: 
-            if i != j:
+            if i != j and not i in globals()[j].equal:
                 set_fraction(i, j, c) 
     a = globals()[a]; b = globals()[b]
     for i in list(b.fraction):
@@ -1073,11 +1087,17 @@ def merge_fraction(a, b, c):
             equal(a, i)
     for i in list(a.fraction):
         frac = c/a.fraction[i]
-        print('[%s, %s: %d]' %(b.name, i, frac))
         if frac > 1:
             set_fraction(i, b.name, frac)
         if frac == 1:
             equal(b, i)
+    for i in items:
+        if b.name in i.fraction and a.name in i.sum_value:
+            for x in i.sum_value[a.name]:
+                if type(x) == str:
+                    frac = i.fraction[b.name] + a.fraction[b.name]
+                    if frac > 1 and x != b.name:
+                        set_fraction(x, b.name, frac)
 
 def set_angle(a, check):
     if a.right_angle:
@@ -1096,6 +1116,12 @@ def set_angle(a, check):
 
 def know_sa1():
     check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
+    if check_parallel(sa1, ['sc2']):
+        if check_parallel(sa2, ['sc1']):
+            equal(b1, 'b2')
+        if check_parallel(sb2, ['sb1']):
+            equal(c1, 'a2')
 
     if check_parallel(sa1, ['sa2', 'sa5', 'sa4']):
         equal(c1, 'd2')
@@ -1204,6 +1230,12 @@ def know_sb2():
 
 def know_sc2():
     check_triangle(a1, b1, c1, 'a2', 'b2', 'c2', sa1, sb1, sc1, 'sa2', 'sb2', 'sc2', 'ar1', 'ar2')
+
+    if check_parallel(sc2, ['sa1']):
+        if check_parallel(sa2, ['sc1']):
+            equal(b1, 'b2')
+        if check_parallel(sb2, ['sb1']):
+            equal(c1, 'a2')
 
     if check_parallel(sc2, ['sb1', 'sa3', 'sc4']):
         equal(b2, 'd2')
