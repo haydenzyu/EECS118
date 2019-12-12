@@ -948,7 +948,7 @@ def know_d3():
         a1.right_angle = True; a1.angle = 90; set_angle(a1, check)
         check = d3.right_angle
         d3.right_angle = True; d3.angle = 90; set_angle(d3, check)
-        check_perpendicular(sb1, 'sa2', True)
+        check_perpendicular(sb3, 'sa4', True)
         merge_sum_value('c1', 'b1', 90, 0)
         merge_sum_value('c1', 'b1', 'a1', 1)
 
