@@ -1,0 +1,127 @@
+21-Oct-2019 20:35:15.987 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.26
+21-Oct-2019 20:35:15.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 16 2019 15:51:39 UTC
+21-Oct-2019 20:35:15.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.26.0
+21-Oct-2019 20:35:15.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+21-Oct-2019 20:35:15.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Oct-2019 20:35:15.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Oct-2019 20:35:15.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-13
+21-Oct-2019 20:35:15.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           13+33
+21-Oct-2019 20:35:15.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Oct-2019 20:35:15.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+21-Oct-2019 20:35:15.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+21-Oct-2019 20:35:16.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Oct-2019 20:35:16.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Oct-2019 20:35:16.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Oct-2019 20:35:16.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\conf\logging.properties
+21-Oct-2019 20:35:16.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Oct-2019 20:35:16.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+21-Oct-2019 20:35:16.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+21-Oct-2019 20:35:16.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+21-Oct-2019 20:35:16.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+21-Oct-2019 20:35:16.033 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+21-Oct-2019 20:35:16.033 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\temp
+21-Oct-2019 20:35:16.034 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+21-Oct-2019 20:35:16.034 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+21-Oct-2019 20:35:16.034 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+21-Oct-2019 20:35:16.040 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+21-Oct-2019 20:35:16.273 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Oct-2019 20:35:17.814 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+21-Oct-2019 20:35:17.818 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [2,067] milliseconds
+21-Oct-2019 20:35:17.859 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Oct-2019 20:35:17.860 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.26]
+21-Oct-2019 20:35:17.873 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\docs]
+21-Oct-2019 20:35:18.353 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [232] milliseconds.
+21-Oct-2019 20:35:18.394 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\docs] has finished in [520] ms
+21-Oct-2019 20:35:18.395 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\examples]
+21-Oct-2019 20:35:20.050 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\examples] has finished in [1,656] ms
+21-Oct-2019 20:35:20.051 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\host-manager]
+21-Oct-2019 20:35:20.123 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\host-manager] has finished in [71] ms
+21-Oct-2019 20:35:20.123 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\manager]
+21-Oct-2019 20:35:20.195 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\manager] has finished in [72] ms
+21-Oct-2019 20:35:20.195 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\ROOT]
+21-Oct-2019 20:35:20.243 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\ROOT] has finished in [48] ms
+21-Oct-2019 20:35:20.244 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test]
+21-Oct-2019 20:35:20.302 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test] has finished in [58] ms
+21-Oct-2019 20:35:20.305 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Oct-2019 20:35:20.315 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+21-Oct-2019 20:35:20.323 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2,503] milliseconds
+21-Oct-2019 21:01:32.909 WARNING [Thread-13] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 21:01:32.911 WARNING [Thread-13] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 23, in <module>]
+21-Oct-2019 21:01:32.914 WARNING [Thread-13] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    """%(gal_1_img[0], gal_1_img[1]))]
+21-Oct-2019 21:01:32.915 WARNING [Thread-13] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndexError: tuple index out of range]
+21-Oct-2019 21:01:32.919 WARNING [Thread-13] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 21:03:13.223 WARNING [Thread-14] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 21:03:13.224 WARNING [Thread-14] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 23, in <module>]
+21-Oct-2019 21:03:13.225 WARNING [Thread-14] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    """%(gal_1_img[0], gal_1_img[1]))]
+21-Oct-2019 21:03:13.225 WARNING [Thread-14] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndexError: tuple index out of range]
+21-Oct-2019 21:03:13.233 WARNING [Thread-14] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 21:03:58.806 WARNING [Thread-15] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 21:03:58.806 WARNING [Thread-15] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 25, in <module>]
+21-Oct-2019 21:03:58.808 WARNING [Thread-15] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    """%(gal_1_img[0], gal_1_img[1]))]
+21-Oct-2019 21:03:58.808 WARNING [Thread-15] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndexError: tuple index out of range]
+21-Oct-2019 21:03:58.817 WARNING [Thread-15] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 21:04:32.771 WARNING [Thread-17] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 21:04:32.771 WARNING [Thread-17] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 25, in <module>]
+21-Oct-2019 21:04:32.773 WARNING [Thread-17] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    """%(gal_1_img[0], gal_1_img[1]))]
+21-Oct-2019 21:04:32.773 WARNING [Thread-17] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndexError: tuple index out of range]
+21-Oct-2019 21:04:32.780 WARNING [Thread-17] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 22:57:11.077 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 22:57:11.077 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 24, in <module>]
+21-Oct-2019 22:57:11.078 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    """%(gal_1_img[i][0], gal_1_img[i+1][0]))]
+21-Oct-2019 22:57:11.079 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndexError: tuple index out of range]
+21-Oct-2019 22:57:11.087 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 23:06:53.579 WARNING [Thread-23] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 23:06:53.579 WARNING [Thread-23] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 24, in <module>]
+21-Oct-2019 23:06:53.581 WARNING [Thread-23] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    """%(gal_1_img[i][0], gal_1_img[i+1][0]))]
+21-Oct-2019 23:06:53.581 WARNING [Thread-23] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndexError: tuple index out of range]
+21-Oct-2019 23:06:53.589 WARNING [Thread-23] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 23:55:53.305 WARNING [Thread-25] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 23:55:53.306 WARNING [Thread-25] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 21, in <module>]
+21-Oct-2019 23:55:53.307 WARNING [Thread-25] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs += "<img src="+"'"+gal_1_img[i][0]+"'"+"width=200px height=200px alt='img not found'>"]
+21-Oct-2019 23:55:53.308 WARNING [Thread-25] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display_imgs' is not defined]
+21-Oct-2019 23:55:53.314 WARNING [Thread-25] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 23:55:55.427 WARNING [Thread-26] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 23:55:55.427 WARNING [Thread-26] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 21, in <module>]
+21-Oct-2019 23:55:55.429 WARNING [Thread-26] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs += "<img src="+"'"+gal_1_img[i][0]+"'"+"width=200px height=200px alt='img not found'>"]
+21-Oct-2019 23:55:55.429 WARNING [Thread-26] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display_imgs' is not defined]
+21-Oct-2019 23:55:55.436 WARNING [Thread-26] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 23:56:35.144 WARNING [Thread-27] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 23:56:35.144 WARNING [Thread-27] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 21, in <module>]
+21-Oct-2019 23:56:35.146 WARNING [Thread-27] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs += "<img src="+"'"+gal_1_img[i][0]+"'"+"width=200px height=200px alt='img not found'>"]
+21-Oct-2019 23:56:35.146 WARNING [Thread-27] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display_imgs' is not defined]
+21-Oct-2019 23:56:35.152 WARNING [Thread-27] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 23:57:07.359 WARNING [Thread-28] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 23:57:07.360 WARNING [Thread-28] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 21, in <module>]
+21-Oct-2019 23:57:07.361 WARNING [Thread-28] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs += "<img src="+"'"+gal_1_img[i][0]+"'"+" width=200px height=200px alt='img not found'>"]
+21-Oct-2019 23:57:07.361 WARNING [Thread-28] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display_imgs' is not defined]
+21-Oct-2019 23:57:07.370 WARNING [Thread-28] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 23:57:19.082 WARNING [Thread-29] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 23:57:19.082 WARNING [Thread-29] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 21, in <module>]
+21-Oct-2019 23:57:19.083 WARNING [Thread-29] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs += "<img src="+"'"+gal_1_img[i][0]+"'"+" width=200px height=200px alt='img not found'>"]
+21-Oct-2019 23:57:19.084 WARNING [Thread-29] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display_imgs' is not defined]
+21-Oct-2019 23:57:19.091 WARNING [Thread-29] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 23:57:30.883 WARNING [Thread-31] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 23:57:30.883 WARNING [Thread-31] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 21, in <module>]
+21-Oct-2019 23:57:30.885 WARNING [Thread-31] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs += "<img src="+"'"+gal_1_img[i][0]+"'"+" width=200px height=200px alt='img not found'>"]
+21-Oct-2019 23:57:30.885 WARNING [Thread-31] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display_imgs' is not defined]
+21-Oct-2019 23:57:30.892 WARNING [Thread-31] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 23:58:22.387 WARNING [Thread-32] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 23:58:22.387 WARNING [Thread-32] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 21, in <module>]
+21-Oct-2019 23:58:22.389 WARNING [Thread-32] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs += "<img src="+"'"+gal_1_img[i][0]+"'"+" width=200px height=200px alt='img not found'>"]
+21-Oct-2019 23:58:22.389 WARNING [Thread-32] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display_imgs' is not defined]
+21-Oct-2019 23:58:22.396 WARNING [Thread-32] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 23:58:33.251 WARNING [Thread-33] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 23:58:33.253 WARNING [Thread-33] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 21, in <module>]
+21-Oct-2019 23:58:33.255 WARNING [Thread-33] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs += "<img src="+"'"+gal_1_img[i][0]+"'"+" width=200px height=200px alt='img not found'>"]
+21-Oct-2019 23:58:33.256 WARNING [Thread-33] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display_imgs' is not defined]
+21-Oct-2019 23:58:33.263 WARNING [Thread-33] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 23:58:42.341 WARNING [Thread-34] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 23:58:42.341 WARNING [Thread-34] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 21, in <module>]
+21-Oct-2019 23:58:42.343 WARNING [Thread-34] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs += "<img src="+"'"+gal_1_img[i][0]+"'"+" width=200px height=200px alt='img not found'>"]
+21-Oct-2019 23:58:42.343 WARNING [Thread-34] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display_imgs' is not defined]
+21-Oct-2019 23:58:42.350 WARNING [Thread-34] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+21-Oct-2019 23:58:43.546 WARNING [Thread-35] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+21-Oct-2019 23:58:43.546 WARNING [Thread-35] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 21, in <module>]
+21-Oct-2019 23:58:43.548 WARNING [Thread-35] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs += "<img src="+"'"+gal_1_img[i][0]+"'"+" width=200px height=200px alt='img not found'>"]
+21-Oct-2019 23:58:43.548 WARNING [Thread-35] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display_imgs' is not defined]
+21-Oct-2019 23:58:43.555 WARNING [Thread-35] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr

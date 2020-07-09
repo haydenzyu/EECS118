@@ -1,0 +1,47 @@
+11-Nov-2019 16:15:34.905 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.26
+11-Nov-2019 16:15:34.912 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 16 2019 15:51:39 UTC
+11-Nov-2019 16:15:34.913 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.26.0
+11-Nov-2019 16:15:34.913 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+11-Nov-2019 16:15:34.915 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+11-Nov-2019 16:15:34.915 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-Nov-2019 16:15:34.916 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-13
+11-Nov-2019 16:15:34.916 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           13+33
+11-Nov-2019 16:15:34.917 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+11-Nov-2019 16:15:34.917 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+11-Nov-2019 16:15:34.917 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+11-Nov-2019 16:15:35.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-Nov-2019 16:15:35.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-Nov-2019 16:15:35.003 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-Nov-2019 16:15:35.003 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\conf\logging.properties
+11-Nov-2019 16:15:35.004 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-Nov-2019 16:15:35.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-Nov-2019 16:15:35.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-Nov-2019 16:15:35.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+11-Nov-2019 16:15:35.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+11-Nov-2019 16:15:35.011 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+11-Nov-2019 16:15:35.012 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\temp
+11-Nov-2019 16:15:35.014 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+11-Nov-2019 16:15:35.020 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-Nov-2019 16:15:35.022 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-Nov-2019 16:15:35.035 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+11-Nov-2019 16:15:35.593 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-Nov-2019 16:15:36.449 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+11-Nov-2019 16:15:36.454 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [3,174] milliseconds
+11-Nov-2019 16:15:36.515 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-Nov-2019 16:15:36.515 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.26]
+11-Nov-2019 16:15:36.532 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\docs]
+11-Nov-2019 16:15:37.412 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [517] milliseconds.
+11-Nov-2019 16:15:37.465 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\docs] has finished in [933] ms
+11-Nov-2019 16:15:37.468 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\examples]
+11-Nov-2019 16:15:42.213 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\examples] has finished in [4,746] ms
+11-Nov-2019 16:15:42.213 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\host-manager]
+11-Nov-2019 16:15:42.462 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\host-manager] has finished in [248] ms
+11-Nov-2019 16:15:42.467 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\manager]
+11-Nov-2019 16:15:42.655 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\manager] has finished in [188] ms
+11-Nov-2019 16:15:42.662 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\ROOT]
+11-Nov-2019 16:15:42.814 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\ROOT] has finished in [153] ms
+11-Nov-2019 16:15:42.816 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test]
+11-Nov-2019 16:15:42.981 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test] has finished in [165] ms
+11-Nov-2019 16:15:42.990 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+11-Nov-2019 16:15:43.028 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+11-Nov-2019 16:15:43.040 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [6,585] milliseconds

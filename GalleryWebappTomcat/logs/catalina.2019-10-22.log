@@ -1,0 +1,217 @@
+22-Oct-2019 11:05:26.374 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.26
+22-Oct-2019 11:05:26.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 16 2019 15:51:39 UTC
+22-Oct-2019 11:05:26.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.26.0
+22-Oct-2019 11:05:26.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+22-Oct-2019 11:05:26.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+22-Oct-2019 11:05:26.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+22-Oct-2019 11:05:26.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-13
+22-Oct-2019 11:05:26.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           13+33
+22-Oct-2019 11:05:26.384 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+22-Oct-2019 11:05:26.384 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+22-Oct-2019 11:05:26.385 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+22-Oct-2019 11:05:26.453 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Oct-2019 11:05:26.453 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+22-Oct-2019 11:05:26.454 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Oct-2019 11:05:26.454 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\conf\logging.properties
+22-Oct-2019 11:05:26.455 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Oct-2019 11:05:26.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+22-Oct-2019 11:05:26.459 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+22-Oct-2019 11:05:26.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+22-Oct-2019 11:05:26.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+22-Oct-2019 11:05:26.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+22-Oct-2019 11:05:26.465 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\temp
+22-Oct-2019 11:05:26.470 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+22-Oct-2019 11:05:26.474 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+22-Oct-2019 11:05:26.475 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+22-Oct-2019 11:05:26.484 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+22-Oct-2019 11:05:27.082 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+22-Oct-2019 11:05:29.480 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+22-Oct-2019 11:05:29.490 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [3,655] milliseconds
+22-Oct-2019 11:05:29.658 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+22-Oct-2019 11:05:29.659 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.26]
+22-Oct-2019 11:05:29.710 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\docs]
+22-Oct-2019 11:05:31.056 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [597] milliseconds.
+22-Oct-2019 11:05:31.117 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\docs] has finished in [1,407] ms
+22-Oct-2019 11:05:31.117 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\examples]
+22-Oct-2019 11:05:35.392 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\examples] has finished in [4,275] ms
+22-Oct-2019 11:05:35.398 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\host-manager]
+22-Oct-2019 11:05:35.698 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\host-manager] has finished in [300] ms
+22-Oct-2019 11:05:35.701 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\manager]
+22-Oct-2019 11:05:35.964 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\manager] has finished in [263] ms
+22-Oct-2019 11:05:35.968 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\ROOT]
+22-Oct-2019 11:05:36.123 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\ROOT] has finished in [155] ms
+22-Oct-2019 11:05:36.124 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test]
+22-Oct-2019 11:05:36.376 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test] has finished in [251] ms
+22-Oct-2019 11:05:36.403 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+22-Oct-2019 11:05:36.444 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+22-Oct-2019 11:05:36.472 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [6,977] milliseconds
+22-Oct-2019 16:21:48.405 WARNING [Thread-20] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3.py", line 31]
+22-Oct-2019 16:21:48.407 WARNING [Thread-20] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    +"Name: "+gal_1_detail[1]]
+22-Oct-2019 16:21:48.409 WARNING [Thread-20] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ^]
+22-Oct-2019 16:21:48.410 WARNING [Thread-20] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndentationError: unexpected indent]
+22-Oct-2019 16:21:48.411 WARNING [Thread-20] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 16:23:15.957 WARNING [Thread-21] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3.py", line 31]
+22-Oct-2019 16:23:15.958 WARNING [Thread-21] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    +"Name: "+gal_1_detail[0]]
+22-Oct-2019 16:23:15.959 WARNING [Thread-21] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ^]
+22-Oct-2019 16:23:15.959 WARNING [Thread-21] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndentationError: unexpected indent]
+22-Oct-2019 16:23:15.961 WARNING [Thread-21] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 16:28:08.209 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3.py", line 34]
+22-Oct-2019 16:28:08.209 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    +"Name: "+gal_1_name[0]]
+22-Oct-2019 16:28:08.210 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ^]
+22-Oct-2019 16:28:08.210 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndentationError: unexpected indent]
+22-Oct-2019 16:28:08.213 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 16:30:35.385 WARNING [Thread-23] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3.py", line 44]
+22-Oct-2019 16:30:35.385 WARNING [Thread-23] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ]
+22-Oct-2019 16:30:35.385 WARNING [Thread-23] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [                        ^]
+22-Oct-2019 16:30:35.386 WARNING [Thread-23] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: unexpected EOF while parsing]
+22-Oct-2019 16:30:35.388 WARNING [Thread-23] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 16:30:54.124 WARNING [Thread-24] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3.py", line 44]
+22-Oct-2019 16:30:54.124 WARNING [Thread-24] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ]
+22-Oct-2019 16:30:54.124 WARNING [Thread-24] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [                        ^]
+22-Oct-2019 16:30:54.125 WARNING [Thread-24] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: unexpected EOF while parsing]
+22-Oct-2019 16:30:54.127 WARNING [Thread-24] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 16:32:44.969 WARNING [Thread-26] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3.py", line 34]
+22-Oct-2019 16:32:44.970 WARNING [Thread-26] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    +"Name: "+gal_1_name[0]]
+22-Oct-2019 16:32:44.970 WARNING [Thread-26] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ^]
+22-Oct-2019 16:32:44.970 WARNING [Thread-26] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndentationError: unexpected indent]
+22-Oct-2019 16:32:44.972 WARNING [Thread-26] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:15:43.221 WARNING [Thread-39] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 17:15:43.221 WARNING [Thread-39] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 41, in <module>]
+22-Oct-2019 17:15:43.221 WARNING [Thread-39] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs += "<img src="+"'"+gal_1_img[i][0]+"'"+" width=200px height=200px"+"id="+"'img"+i+"'"+"alt='img not found'>"]
+22-Oct-2019 17:15:43.226 WARNING [Thread-39] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [TypeError: must be str, not int]
+22-Oct-2019 17:15:43.243 WARNING [Thread-39] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:23:38.632 WARNING [Thread-41] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 42]
+22-Oct-2019 17:23:38.632 WARNING [Thread-41] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs = "<img src="str(gal_1_img[i][0])+" width=200px height=200px"+"id="+"'img"+str(i)+"'"+" alt='img not found'>"]
+22-Oct-2019 17:23:38.632 WARNING [Thread-41] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [                                ^]
+22-Oct-2019 17:23:38.632 WARNING [Thread-41] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 17:23:38.644 WARNING [Thread-41] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:23:57.042 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 42]
+22-Oct-2019 17:23:57.042 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs = "<img src="str(gal_1_img[i][0])+" width=200px height=200px"+"id="+"'img"+str(i)+"'"+" alt='img not found'>"]
+22-Oct-2019 17:23:57.049 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [                                ^]
+22-Oct-2019 17:23:57.050 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 17:23:57.057 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:24:11.436 WARNING [Thread-43] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 17:24:11.437 WARNING [Thread-43] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 43, in <module>]
+22-Oct-2019 17:24:11.438 WARNING [Thread-43] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display += display_img #+ display_detail]
+22-Oct-2019 17:24:11.439 WARNING [Thread-43] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display' is not defined]
+22-Oct-2019 17:24:11.455 WARNING [Thread-43] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:25:13.007 WARNING [Thread-44] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 17:25:13.008 WARNING [Thread-44] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 43, in <module>]
+22-Oct-2019 17:25:13.009 WARNING [Thread-44] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display += display_img #+ display_detail]
+22-Oct-2019 17:25:13.009 WARNING [Thread-44] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display' is not defined]
+22-Oct-2019 17:25:13.027 WARNING [Thread-44] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:26:14.762 WARNING [Thread-45] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 17:26:14.762 WARNING [Thread-45] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 43, in <module>]
+22-Oct-2019 17:26:14.769 WARNING [Thread-45] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display += display_img #+ display_detail]
+22-Oct-2019 17:26:14.772 WARNING [Thread-45] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display' is not defined]
+22-Oct-2019 17:26:14.791 WARNING [Thread-45] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:27:28.680 WARNING [Thread-46] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 17:27:28.680 WARNING [Thread-46] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 43, in <module>]
+22-Oct-2019 17:27:28.680 WARNING [Thread-46] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display += display_img]
+22-Oct-2019 17:27:28.681 WARNING [Thread-46] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display' is not defined]
+22-Oct-2019 17:27:28.699 WARNING [Thread-46] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:28:00.208 WARNING [Thread-47] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 17:28:00.209 WARNING [Thread-47] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 43, in <module>]
+22-Oct-2019 17:28:00.210 WARNING [Thread-47] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display += display_img]
+22-Oct-2019 17:28:00.211 WARNING [Thread-47] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display' is not defined]
+22-Oct-2019 17:28:00.232 WARNING [Thread-47] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:28:18.890 WARNING [Thread-48] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 17:28:18.890 WARNING [Thread-48] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 43, in <module>]
+22-Oct-2019 17:28:18.894 WARNING [Thread-48] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display += display_img]
+22-Oct-2019 17:28:18.897 WARNING [Thread-48] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display' is not defined]
+22-Oct-2019 17:28:18.926 WARNING [Thread-48] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:28:33.065 WARNING [Thread-49] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 17:28:33.066 WARNING [Thread-49] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 43, in <module>]
+22-Oct-2019 17:28:33.068 WARNING [Thread-49] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display += display_img]
+22-Oct-2019 17:28:33.069 WARNING [Thread-49] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display' is not defined]
+22-Oct-2019 17:28:33.089 WARNING [Thread-49] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:28:58.701 WARNING [Thread-50] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 17:28:58.705 WARNING [Thread-50] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 45, in <module>]
+22-Oct-2019 17:28:58.710 WARNING [Thread-50] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    print(display_img)]
+22-Oct-2019 17:28:58.711 WARNING [Thread-50] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display_img' is not defined]
+22-Oct-2019 17:28:58.739 WARNING [Thread-50] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:30:26.639 WARNING [Thread-52] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 17:30:26.639 WARNING [Thread-52] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 43, in <module>]
+22-Oct-2019 17:30:26.640 WARNING [Thread-52] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display += display_imgs]
+22-Oct-2019 17:30:26.640 WARNING [Thread-52] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [NameError: name 'display' is not defined]
+22-Oct-2019 17:30:26.652 WARNING [Thread-52] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:32:56.504 WARNING [Thread-55] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 46]
+22-Oct-2019 17:32:56.504 WARNING [Thread-55] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display += display_imgs + display details]
+22-Oct-2019 17:32:56.504 WARNING [Thread-55] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [                                            ^]
+22-Oct-2019 17:32:56.504 WARNING [Thread-55] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 17:32:56.512 WARNING [Thread-55] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 17:34:37.329 WARNING [Thread-57] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 46]
+22-Oct-2019 17:34:37.329 WARNING [Thread-57] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display += display_imgs + display details]
+22-Oct-2019 17:34:37.331 WARNING [Thread-57] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [                                            ^]
+22-Oct-2019 17:34:37.331 WARNING [Thread-57] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 17:34:37.336 WARNING [Thread-57] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 18:02:43.615 WARNING [Thread-60] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 18:02:43.618 WARNING [Thread-60] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 54, in <module>]
+22-Oct-2019 18:02:43.619 WARNING [Thread-60] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_details = "<h3 id='img"+str(detail)+"' >"+ +"</h3>"]
+22-Oct-2019 18:02:43.619 WARNING [Thread-60] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [TypeError: bad operand type for unary +: 'str']
+22-Oct-2019 18:02:43.636 WARNING [Thread-60] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 18:10:24.490 WARNING [Thread-62] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 18:10:24.490 WARNING [Thread-62] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 54, in <module>]
+22-Oct-2019 18:10:24.491 WARNING [Thread-62] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_details = "<h3 >Year: "+str(detail[2])+"<br />Type: "+str(detail[3])+"<br />Width: "+str(detail[4])+"<br />Height: "+str(detail[5])+"<br />Location: "+str(detail[6])+"<br />Description: "+str(detail[7])+"</h3>"]
+22-Oct-2019 18:10:24.492 WARNING [Thread-62] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [TypeError: 'NoneType' object is not subscriptable]
+22-Oct-2019 18:10:24.507 WARNING [Thread-62] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 18:11:20.592 WARNING [Thread-63] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 18:11:20.593 WARNING [Thread-63] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 54, in <module>]
+22-Oct-2019 18:11:20.594 WARNING [Thread-63] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_details = "<h3 >Year: "+str(detail[2])+"</h3>"#+"<br />Type: "+str(detail[3])+"<br />Width: "+str(detail[4])+"<br />Height: "+str(detail[5])+"<br />Location: "+str(detail[6])+"<br />Description: "+str(detail[7])+"</h3>"]
+22-Oct-2019 18:11:20.594 WARNING [Thread-63] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [TypeError: 'NoneType' object is not subscriptable]
+22-Oct-2019 18:11:20.615 WARNING [Thread-63] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 18:12:53.539 WARNING [Thread-65] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 18:12:53.540 WARNING [Thread-65] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 54, in <module>]
+22-Oct-2019 18:12:53.541 WARNING [Thread-65] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_details = "<h3 >Year: "+str(detail[2])+"</h3>"#+"<br />Type: "+str(detail[3])+"<br />Width: "+str(detail[4])+"<br />Height: "+str(detail[5])+"<br />Location: "+str(detail[6])+"<br />Description: "+str(detail[7])+"</h3>"]
+22-Oct-2019 18:12:53.542 WARNING [Thread-65] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [TypeError: 'NoneType' object is not subscriptable]
+22-Oct-2019 18:12:53.559 WARNING [Thread-65] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 18:13:18.818 WARNING [Thread-66] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 18:13:18.818 WARNING [Thread-66] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 54, in <module>]
+22-Oct-2019 18:13:18.820 WARNING [Thread-66] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_details = "<h3 >Year: "+str(detail[0])+"</h3>"#+"<br />Type: "+str(detail[3])+"<br />Width: "+str(detail[4])+"<br />Height: "+str(detail[5])+"<br />Location: "+str(detail[6])+"<br />Description: "+str(detail[7])+"</h3>"]
+22-Oct-2019 18:13:18.820 WARNING [Thread-66] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [TypeError: 'NoneType' object is not subscriptable]
+22-Oct-2019 18:13:18.837 WARNING [Thread-66] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 18:16:26.632 WARNING [Thread-69] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 60]
+22-Oct-2019 18:16:26.634 WARNING [Thread-69] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    else:]
+22-Oct-2019 18:16:26.636 WARNING [Thread-69] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [       ^]
+22-Oct-2019 18:16:26.636 WARNING [Thread-69] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 18:16:26.641 WARNING [Thread-69] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 18:55:36.682 WARNING [Thread-70] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 60]
+22-Oct-2019 18:55:36.682 WARNING [Thread-70] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    else:]
+22-Oct-2019 18:55:36.682 WARNING [Thread-70] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [       ^]
+22-Oct-2019 18:55:36.682 WARNING [Thread-70] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 18:55:36.682 WARNING [Thread-70] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 19:20:26.762 WARNING [Thread-76] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+22-Oct-2019 19:20:26.762 WARNING [Thread-76] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 60, in <module>]
+22-Oct-2019 19:20:26.762 WARNING [Thread-76] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_imgs = "<img src='"+gal_1_img[i][0]+"' width="+int(detail[4])+"px height="+int(detail[5])+"px id='img"+str(i)+"' alt='img not found'>"]
+22-Oct-2019 19:20:26.766 WARNING [Thread-76] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [TypeError: must be str, not int]
+22-Oct-2019 19:20:26.782 WARNING [Thread-76] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 19:57:49.172 WARNING [Thread-79] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 63]
+22-Oct-2019 19:57:49.172 WARNING [Thread-79] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    }]
+22-Oct-2019 19:57:49.177 WARNING [Thread-79] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ^]
+22-Oct-2019 19:57:49.178 WARNING [Thread-79] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 19:57:49.185 WARNING [Thread-79] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 20:03:36.448 WARNING [Thread-80] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 63]
+22-Oct-2019 20:03:36.452 WARNING [Thread-80] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    }]
+22-Oct-2019 20:03:36.457 WARNING [Thread-80] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ^]
+22-Oct-2019 20:03:36.460 WARNING [Thread-80] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 20:03:36.463 WARNING [Thread-80] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 20:03:46.760 WARNING [Thread-81] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 63]
+22-Oct-2019 20:03:46.760 WARNING [Thread-81] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    }]
+22-Oct-2019 20:03:46.764 WARNING [Thread-81] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ^]
+22-Oct-2019 20:03:46.765 WARNING [Thread-81] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 20:03:46.770 WARNING [Thread-81] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 20:04:47.105 WARNING [Thread-82] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 63]
+22-Oct-2019 20:04:47.105 WARNING [Thread-82] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    }]
+22-Oct-2019 20:04:47.108 WARNING [Thread-82] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ^]
+22-Oct-2019 20:04:47.110 WARNING [Thread-82] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 20:04:47.115 WARNING [Thread-82] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 20:05:01.510 WARNING [Thread-83] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 63]
+22-Oct-2019 20:05:01.511 WARNING [Thread-83] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    }]
+22-Oct-2019 20:05:01.511 WARNING [Thread-83] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ^]
+22-Oct-2019 20:05:01.511 WARNING [Thread-83] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 20:05:01.518 WARNING [Thread-83] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+22-Oct-2019 20:05:13.400 WARNING [Thread-84] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3_gallery1.py", line 63]
+22-Oct-2019 20:05:13.400 WARNING [Thread-84] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    }]
+22-Oct-2019 20:05:13.400 WARNING [Thread-84] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    ^]
+22-Oct-2019 20:05:13.403 WARNING [Thread-84] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [SyntaxError: invalid syntax]
+22-Oct-2019 20:05:13.408 WARNING [Thread-84] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr

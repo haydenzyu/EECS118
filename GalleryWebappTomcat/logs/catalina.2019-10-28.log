@@ -1,0 +1,6 @@
+28-Oct-2019 02:14:52.058 WARNING [Thread-217] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'lsdfj'")]
+28-Oct-2019 02:14:52.058 WARNING [Thread-217] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+28-Oct-2019 02:14:52.070 WARNING [Thread-217] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [2] lines on stderr
+28-Oct-2019 02:15:20.235 WARNING [Thread-220] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: 'windows'")]
+28-Oct-2019 02:15:20.235 WARNING [Thread-220] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+28-Oct-2019 02:15:20.247 WARNING [Thread-220] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [2] lines on stderr

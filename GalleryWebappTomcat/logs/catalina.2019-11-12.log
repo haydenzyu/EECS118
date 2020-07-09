@@ -1,0 +1,84 @@
+12-Nov-2019 19:38:00.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.26
+12-Nov-2019 19:38:00.315 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 16 2019 15:51:39 UTC
+12-Nov-2019 19:38:00.315 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.26.0
+12-Nov-2019 19:38:00.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+12-Nov-2019 19:38:00.316 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+12-Nov-2019 19:38:00.317 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+12-Nov-2019 19:38:00.317 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-13
+12-Nov-2019 19:38:00.318 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           13+33
+12-Nov-2019 19:38:00.318 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+12-Nov-2019 19:38:00.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+12-Nov-2019 19:38:00.319 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+12-Nov-2019 19:38:00.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+12-Nov-2019 19:38:00.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+12-Nov-2019 19:38:00.413 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+12-Nov-2019 19:38:00.413 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\conf\logging.properties
+12-Nov-2019 19:38:00.414 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+12-Nov-2019 19:38:00.415 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+12-Nov-2019 19:38:00.416 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+12-Nov-2019 19:38:00.417 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+12-Nov-2019 19:38:00.417 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+12-Nov-2019 19:38:00.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26
+12-Nov-2019 19:38:00.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\temp
+12-Nov-2019 19:38:00.421 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+12-Nov-2019 19:38:00.421 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+12-Nov-2019 19:38:00.422 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+12-Nov-2019 19:38:00.434 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+12-Nov-2019 19:38:00.927 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+12-Nov-2019 19:38:03.378 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+12-Nov-2019 19:38:03.378 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [4,229] milliseconds
+12-Nov-2019 19:38:03.477 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+12-Nov-2019 19:38:03.478 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.26]
+12-Nov-2019 19:38:03.504 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\docs]
+12-Nov-2019 19:38:04.795 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [638] milliseconds.
+12-Nov-2019 19:38:04.850 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\docs] has finished in [1,344] ms
+12-Nov-2019 19:38:04.851 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\examples]
+12-Nov-2019 19:38:08.879 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\examples] has finished in [4,024] ms
+12-Nov-2019 19:38:08.880 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\host-manager]
+12-Nov-2019 19:38:09.106 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\host-manager] has finished in [226] ms
+12-Nov-2019 19:38:09.110 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\manager]
+12-Nov-2019 19:38:09.340 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\manager] has finished in [229] ms
+12-Nov-2019 19:38:09.341 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\ROOT]
+12-Nov-2019 19:38:09.511 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\ROOT] has finished in [170] ms
+12-Nov-2019 19:38:09.511 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test]
+12-Nov-2019 19:38:09.705 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test] has finished in [190] ms
+12-Nov-2019 19:38:09.720 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+12-Nov-2019 19:38:09.749 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+12-Nov-2019 19:38:09.775 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [6,389] milliseconds
+12-Nov-2019 19:44:29.384 WARNING [Thread-21] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+12-Nov-2019 19:44:29.384 WARNING [Thread-21] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3.py", line 57, in <module>]
+12-Nov-2019 19:44:29.391 WARNING [Thread-21] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_gals += "<input type='hidden' name='gal_name' value='"+gal_name[i][0]+"'>"]
+12-Nov-2019 19:44:29.392 WARNING [Thread-21] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndexError: tuple index out of range]
+12-Nov-2019 19:44:29.405 WARNING [Thread-21] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+12-Nov-2019 19:44:36.228 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [Traceback (most recent call last):]
+12-Nov-2019 19:44:36.229 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  File "C:\Users\hayde\Desktop\UCI\Fall 2019\EECS 118\MP2\apache-tomcat-9.0.26\webapps\test\WEB-INF\cgi\project_3.py", line 57, in <module>]
+12-Nov-2019 19:44:36.232 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [    display_gals += "<input type='hidden' name='gal_name' value='"+gal_name[i][0]+"'>"]
+12-Nov-2019 19:44:36.233 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [IndexError: tuple index out of range]
+12-Nov-2019 19:44:36.248 WARNING [Thread-22] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+12-Nov-2019 20:43:28.086 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect integer value: '' for column 'year' at row 1")]
+12-Nov-2019 20:43:28.090 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+12-Nov-2019 20:43:28.093 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect integer value: '' for column 'width' at row 1")]
+12-Nov-2019 20:43:28.094 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+12-Nov-2019 20:43:28.094 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect integer value: '' for column 'height' at row 1")]
+12-Nov-2019 20:43:28.096 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+12-Nov-2019 20:43:28.097 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect integer value: 'None' for column 'artist_id' at row 1")]
+12-Nov-2019 20:43:28.098 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+12-Nov-2019 20:43:28.100 WARNING [Thread-42] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [8] lines on stderr
+12-Nov-2019 20:45:44.828 WARNING [Thread-64] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect integer value: '' for column 'year' at row 1")]
+12-Nov-2019 20:45:44.830 WARNING [Thread-64] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+12-Nov-2019 20:45:44.834 WARNING [Thread-64] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect integer value: 'None' for column 'artist_id' at row 1")]
+12-Nov-2019 20:45:44.842 WARNING [Thread-64] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+12-Nov-2019 20:45:44.847 WARNING [Thread-64] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+12-Nov-2019 20:46:32.495 WARNING [Thread-75] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect integer value: '' for column 'year' at row 1")]
+12-Nov-2019 20:46:32.495 WARNING [Thread-75] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+12-Nov-2019 20:46:32.497 WARNING [Thread-75] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect integer value: 'None' for column 'artist_id' at row 1")]
+12-Nov-2019 20:46:32.497 WARNING [Thread-75] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+12-Nov-2019 20:46:32.504 WARNING [Thread-75] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+12-Nov-2019 20:46:59.681 WARNING [Thread-78] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect integer value: '' for column 'year' at row 1")]
+12-Nov-2019 20:46:59.682 WARNING [Thread-78] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+12-Nov-2019 20:46:59.690 WARNING [Thread-78] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect integer value: 'None' for column 'artist_id' at row 1")]
+12-Nov-2019 20:46:59.690 WARNING [Thread-78] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+12-Nov-2019 20:46:59.696 WARNING [Thread-78] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [4] lines on stderr
+12-Nov-2019 20:49:18.465 WARNING [Thread-96] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [C:\Users\hayde\AppData\Local\Programs\Python\Python36\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect integer value: 'None' for column 'artist_id' at row 1")]
+12-Nov-2019 20:49:18.466 WARNING [Thread-96] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog stderr line: [  result = self._query(query)]
+12-Nov-2019 20:49:18.475 WARNING [Thread-96] org.apache.catalina.servlets.CGIServlet$CGIRunner.sendToLog Received [2] lines on stderr

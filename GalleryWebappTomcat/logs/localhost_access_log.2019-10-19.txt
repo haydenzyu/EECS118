@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:47:59 -0700] "GET /test/cgi-bin/hello.py HTTP/1.1" 200 155
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:47:59 -0700] "GET /favicon.ico HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:48:03 -0700] "GET /test/cgi-bin/project_2.py HTTP/1.1" 200 825
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:48:06 -0700] "POST /test/cgi-bin/project_2_page2.py HTTP/1.1" 200 1246
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:48:06 -0700] "GET /test/cgi-bin/no%20image HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:48:08 -0700] "GET /test/cgi-bin/no%20image HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:48:09 -0700] "GET /test/cgi-bin/no%20image HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:48:10 -0700] "GET /test/cgi-bin/no%20image HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:49:35 -0700] "GET /test/cgi-bin/hello.py HTTP/1.1" 200 207
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:49:37 -0700] "GET /test/cgi-bin/hello.py? HTTP/1.1" 200 207
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:49:39 -0700] "GET /test/cgi-bin/hello.py? HTTP/1.1" 200 207
+0:0:0:0:0:0:0:1 - - [19/Oct/2019:20:49:41 -0700] "GET /test/cgi-bin/hello.py? HTTP/1.1" 200 207
